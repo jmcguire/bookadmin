@@ -1,0 +1,15 @@
+a pet
+you choose the base form
+it evolves as you read books
+evolves based on genre
+can give it hats on holidays
+it is unique to you and cannot be given away
+a new pet is made every year
+immutable
+can put older hats on newer pets
+but hats are one time things, nonfungible
+your animal can be put into fireplace mode
+
+Take a photo to log a book or books as owned or read
+
+A good test if the book collator is if it can recognize the various Martin Fierro Gaucho as the same book. 

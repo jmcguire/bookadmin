@@ -1,0 +1,11 @@
+ul {
+    background-color: white !important;
+}
+
+li a {
+    color: green !important;
+}
+
+body {
+    background: white url("images/image.jpg") !important;
+}

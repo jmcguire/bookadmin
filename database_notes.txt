@@ -1,0 +1,173 @@
+--
+-- incoming data from various services
+-- this is flat data with no translation or understanding from our side
+--
+
+-- individual imported records
+provenance_edition
+    provenance_edition_id PK
+    provenance_import_id FK
+    external_id TEXT
+    revision TEXT NULL
+    data JSON
+
+provenance_work
+    provenance_work_id PK
+    provenance_import_id FK
+    external_id TEXT
+    revision TEXT NULL
+    data JSON
+
+provenance_edition_to_work_mapping
+    provenance_edition_id FK
+    provenance_work_id FK
+    provenance_import_id FK
+    revision TEXT NULL
+
+provenance_author
+    provenance_author_id PK
+    external_id TEXT
+    data JSON
+    revision TEXT NULL
+    provenance_import_id FK
+
+-- often a bunch of import records come from a single batch
+provenance_import
+    provenance_import_id PK
+    provider TEXT
+    uri TEXT -- some globally true identifier?
+    imported DATETIME
+
+--
+-- editorial overrides and mapping decisions
+--
+
+decision_edition
+    edition_id FK PK
+    overrides JSON
+    decision JSON
+    created_at DATETIME
+    updated_at DATETIME
+
+decision_work
+    work_id FK PK
+    overrides JSON
+    decision JSON
+    created_at DATETIME
+    updated_at DATETIME
+
+decision_edition_to_work
+    edition_id FK PK
+    forced_work_id FK
+    decision JSON
+    created_at DATETIME
+    updated_at DATETIME
+
+decision_author
+    author_id FK PK
+    decision JSON
+    overrides JSON
+    created_at DATETIME
+    updated_at DATETIME
+
+-- the edition data can come from one or more provenance records
+-- many-to-one of provenance-to-edition
+-- this will probably be explicit in the provence data, but we want to map it to our keys
+provenance_edition_to_our_edition -- or identity_mapping?
+    provenance_edition_id FK PK
+    edition_id FK
+
+provenance_work_to_our_work
+    provenance_work_id FK PK
+    work_id FK
+
+provenance_author_to_our_author
+    provenance_author_id FK PK
+    author_id FK
+
+--
+-- core tables that make up our app
+--
+
+-- a single published volume
+edition
+    edition_id PK
+    title TEXT
+    author_id FK
+    description TEXT
+    cover_id FK -- default cover
+    translator_author_id FK NULL
+    introduction_author_id FK NULL
+    year_published INT NULL
+    publisher_id FK NULL
+    pages INT NULL
+    updated_at DATETIME
+    work_id FK
+    language_code FK
+
+-- a piece of intellectual property
+work
+    work_id PK
+    title TEXT
+    author_id FK
+    description TEXT
+    year_first_published INT NULL 
+    language_code FK
+    updated_at DATETIME
+    cover_id FK -- default cover
+
+author
+    author_id PK
+    given_name TEXT
+    family_name TEXT
+    sort_name TEXT
+    print_name TEXT
+    nationality_code CHAR2 FK NULL
+    language_code CHAR2 FK NULL
+    birth DATE NULL
+    death DATE NULL
+    description TEXT
+
+--
+-- various normalized information about a book
+--
+
+edition_isbn
+    edition_id FK
+    isbn13 CHAR13
+
+covers
+    cover_id PK
+    cover_filename TEXT
+    edition_id FK
+
+nationality
+    nationality_code CHAR2 PK
+    nation TEXT
+
+language
+    language_code CHAR2 PK -- two character language code, instead of a proper id?
+    language_name TEXT
+
+publisher
+    publisher_id PK
+    name TEXT
+    nationality CHAR2 FK
+
+-- for a book. e.g. lit fic, fantasy, gonzo, i dunno just whatever
+genre
+    genre_id PK
+    genre_name TEXT
+
+work_x_genre
+    work_id FK PK
+    genre_id FK PK
+
+-- for authors. e.g. modernism, conservative, existentialism. i dunno, another thing to think about
+movement
+    movement_id PK
+    movement_name TEXT
+
+author_x_movement
+    author_id FK PK
+    movement_id FK
