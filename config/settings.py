@@ -25,7 +25,7 @@ SECRET_KEY = "django-insecure-*jn^47ij1=#3nmil2jf#y1kf5r9$@y!0s4_s$dj($#r=v__89)
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS: list[str] = []
 
 
 # Application definition
@@ -117,3 +117,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/6.0/howto/static-files/
 
 STATIC_URL = "static/"
+
+# for downloaded files
+
+DOWNLOAD_DIR = BASE_DIR / "downloads"

@@ -1,0 +1,142 @@
+
+https://docs.djangoproject.com/en/6.0/ref/models/fields
+
+# opinions and notes
+
+django is very much 2000-era piece of software
+it works great with heirarchical inheritance and not great with traits or mixins (around models, it gets wordy)
+putting classnames in text to get around circular inheritance is a neat workaround but still a workaround
+pylance is a static analysis and doesn't understand dynamically generated variables and fns that django models have
+mypy is a static anlysis that can, with django-stubs
+uv doesn't seem much better than anything that came before it, but it is nice to not have to run venv all the time
+ruff is for formatting and removing unused imports
+this is a lot of workarounds for using a dynamic type checking language
+should've just used go
+
+# uv notes
+
+brew install uv
+
+uv to manage python versions, and dependencies, and run code
+
+don't touch pip or venv
+
+```
+uv add DEPENDENCY
+uv add --dev DEPENDENCY
+uv remove DEPENDENCY
+uv run pytest
+
+uv run python manage.py runserver
+
+uv run python -m django --version
+uv run python manage.py shell
+uv run python manage.py check
+
+uv run python manage.py makemigrations APPNAME
+uv run python manage.py migrate
+uv run python manage.py test polls
+
+uv run pytest
+uv run python manage.py test
+
+# update the dynamic model type checking
+uv run mypy books
+```
+
+when cloning this repo, initially run `uv sync`
+
+# vs code notes
+
+use ruff to auto-format on save, and auto-sort imports
+
+# other book social site notes
+
+- **bookwyrm** too slow
+- **hardcover** doesn't have leo the late bloomer, takes too many steps to mark a book as read, their top lists isn't personalized, missing young zeus
+- **fable** is built to be an app, really app based, does have a nice way to start noting books youve read, where selecing one opens a fields of similar books, but it's strictly an app
+- **goodreads** is amazon and abandoned
+
+# ideas
+
+a work is an intellectual piece of writing
+an edition is a published thing of a work
+this website focuses on works (though a person can decide if they've read a specific edition)
+
+technically each translation is a new work
+we don't go that far
+for our needs, a translation is a published edition of a work
+
+but is an abridged version of a work the same work?
+what about an annotated edition?
+how do we note that? little tags?
+
+in all cases, maybe you read a specific one, but you talk on the general one?
+
+groups
+a group could be like "translations of a work"
+a group could be an ordered series like "harry potter"
+work can be in multiple groups
+these are not user created
+
+tables around interacting with a work
+
+ - user - 
+ - user_rating - 
+ - conversation - an abstract place where a single conversation happens
+ - conversation_to_work - each conversation can be part of multiple works
+ - conversation_to_series - each conversation can be part of multiple series
+ - message - on a conversation, some text and a user, can mark it as a review, otherwise a message is limited to a smaller size (reviews can be larger)
+ - user_read
+ - user_want_to_read - includes who recommended it, maybe a link to a message or a user
+ - update - an update a user makes on their wall
+
+any review is specific for an edition, but is displayed on the work
+
+conversations
+conversation is a specific thing, separate from anything
+but it can be shown on a page, and often is connected to a work, to a series, to the original untranslated work
+this way we can just "attach" the same conversationto multiple "translations" of a book
+or a whole series
+sometimes a conversation is on a work, sometimes it's on a translation, but mostly all conversa
+on the conversation, there's a little notes on which work a person has read
+
+easy way to add books and rate books, like old school netflix, hover over and quickly say "read, 0-3 stars, want to read"
+
+is this too cute:
+"originally written" is on the work
+"originally published" in on the edition
+
+when looking up books, multiple editions of a book, with different introductions, should be under one book entry
+
+a pet
+you choose the base form
+it evolves as you read books
+evolves based on genre
+can give it hats on holidays
+it is unique to you and cannot be given away
+a new pet is made every year
+immutable
+can put older hats on newer pets
+but hats are one time things, nonfungible
+your animal can be put into fireplace mode
+
+Take a photo to log a book or books as owned or read
+get a book info from a picture
+
+A good test of the book collator is if it can recognize the various Martin Fierro El Gaucho as the same work
+lots of sites have trouble with that
+
+a personal canon, you're own top 8. like the myspace 8 favorite.
+
+# useful shell
+
+counts lines of code
+
+```
+rg --pcre2 --glob '*.py' \
+  --glob '!**/migrations/**' \
+  --glob '!**/__pycache__/**' \
+  --glob '!**/__init__.py' \
+  '^(?!\s*(?:from\b|import\b|$)).*\S' | wc -l
+```

@@ -18,44 +18,15 @@ class ProvenanceFieldsMixin(models.Model):
 
 
 class ProvenanceEdition(ProvenanceFieldsMixin):
-    provenance_edition = models.BigAutoField(primary_key=True)
     provenance_import = models.ForeignKey(
-        "ProvenanceImport", null=True, on_delete=models.PROTECT
+        "ProvenanceImport", on_delete=models.PROTECT, related_name="editions"
     )
-
-    class Meta:  # pyright: ignore[reportIncompatibleVariableOverride]
-        constraints = [  # noqa: RUF012
-            models.UniqueConstraint(
-                fields=[
-                    "provenance_edition",
-                    "provenance_import",
-                ],
-                name="unique_import_edition",
-            ),
-        ]
 
 
 class ProvenanceWork(ProvenanceFieldsMixin):
-    provenance_work = models.BigAutoField(primary_key=True)
-    provenance_import = models.ForeignKey("ProvenanceImport", on_delete=models.PROTECT)
-    external_id = models.CharField(max_length=200)
-    revision = models.CharField(
-        max_length=200,
-        null=True,
-        blank=True,
+    provenance_import = models.ForeignKey(
+        "ProvenanceImport", on_delete=models.PROTECT, related_name="works"
     )
-    data = models.JSONField()
-
-    class Meta:  # pyright: ignore[reportIncompatibleVariableOverride]
-        constraints = [  # noqa: RUF012
-            models.UniqueConstraint(
-                fields=[
-                    "provenance_work",
-                    "provenance_import",
-                ],
-                name="unique_import_work",
-            ),
-        ]
 
 
 class ProvenanceEditionToWorkMapping(models.Model):
@@ -63,32 +34,33 @@ class ProvenanceEditionToWorkMapping(models.Model):
         "ProvenanceEdition", on_delete=models.PROTECT
     )
     provenance_work = models.ForeignKey("ProvenanceWork", on_delete=models.PROTECT)
-    provenance_import = models.ForeignKey("ProvenanceImport", on_delete=models.PROTECT)
+    provenance_import = models.ForeignKey(
+        "ProvenanceImport", on_delete=models.PROTECT, related_name="mappings"
+    )
     revision = models.CharField(max_length=200)
-
-    class Meta:
-        constraints = [  # noqa: RUF012
-            models.UniqueConstraint(
-                fields=[
-                    "provenance_edition",
-                    "provenance_work",
-                    "provenance_import",
-                ],
-                name="unique_import_edition_work",
-            ),
-        ]
 
 
 class ProvenanceAuthor(ProvenanceFieldsMixin):
-    provenance_author = models.BigAutoField(primary_key=True)
-    provenance_import_id = models.ForeignKey(
-        "ProvenanceImport", on_delete=models.PROTECT
+    provenance_import = models.ForeignKey(
+        "ProvenanceImport", on_delete=models.PROTECT, related_name="authors"
     )
 
 
 # often a bunch of import records come from a single batch
 class ProvenanceImport(models.Model):
-    provenance_import = models.BigAutoField(primary_key=True)
     provider = models.CharField(max_length=200)
-    uri = models.CharField(max_length=200)  # some globally true identifier?
+    uri = models.CharField(
+        max_length=200, null=True
+    )  # some globally unique identifier?
     imported = models.DateTimeField(auto_now_add=True)
+    filename = models.CharField(
+        max_length=200
+    )  # replace with FileField or FilePathField?
+
+    def stats(self):
+        return {
+            "editions": self.editions.count(),
+            "works": self.works.count(),
+            "authors": self.authors.count(),
+            "mappings": self.mappings.count(),
+        }

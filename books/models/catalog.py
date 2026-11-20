@@ -7,7 +7,6 @@ from .abstract_models import TimeStampedFieldsMixin
 
 # a single published volume
 class Edition(TimeStampedFieldsMixin):
-    edition = models.BigAutoField(primary_key=True)
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     default_cover = models.ForeignKey(
@@ -40,7 +39,6 @@ class Edition(TimeStampedFieldsMixin):
 
 # a piece of intellectual property
 class Work(TimeStampedFieldsMixin):
-    work = models.BigAutoField(primary_key=True)
     title = models.CharField(max_length=200)
     author = models.ForeignKey("books.Author", on_delete=models.PROTECT)
     description = models.CharField(max_length=200)
@@ -54,7 +52,6 @@ class Work(TimeStampedFieldsMixin):
 
 
 class Author(TimeStampedFieldsMixin):
-    author = models.BigAutoField(primary_key=True)
     given_name = models.CharField(max_length=200)
     family_name = models.CharField(max_length=200)
     sort_name = models.CharField(max_length=200)
@@ -68,3 +65,9 @@ class Author(TimeStampedFieldsMixin):
     birth = models.DateField(null=True, blank=True)
     death = models.DateField(null=True, blank=True)
     description = models.CharField(max_length=200)
+
+    def save(self, **kwargs):
+        # or use GeneratedField?
+        self.print_name = self.given_name + " " + self.family_name
+        self.sort_name = self.family_name + " " + self.given_name
+        super().save(**kwargs)

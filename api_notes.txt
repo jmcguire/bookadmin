@@ -1,0 +1,17 @@
+for provenance importing:
+
+check usual sources for new files
+ - put
+ - looks through a a configured list of sources
+ - the config also gets the inital date to start with, so it won't look at older files than the initial import
+ - for each source it gets a list of update files that can be downloaded
+ - filters out anything we already have
+ - return: a list of possible files to download from each source, also any sources that gave an error
+
+download an update
+ - post
+ - input: source and filename
+ - download a zip file to a local directory
+ - (if download is too big, may not return, instead will ask for an email to send a "complete" message)
+ - (if download in progress for that file, returns an error)
+ - returns: name of source, filename, size

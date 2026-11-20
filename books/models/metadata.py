@@ -10,15 +10,17 @@ class EditionISBN(models.Model):
 
 class Cover(models.Model):
     cover = models.BigAutoField(primary_key=True)
-    cover_filename = models.CharField(max_length=200)
+    cover_filename = models.CharField(max_length=200)  # ImageField?
     edition_id = models.ForeignKey("books.Edition", on_delete=models.PROTECT)
 
 
+# replace with a Field.choices
 class Nationality(models.Model):
     nationality_code = models.CharField(max_length=3, primary_key=True)
     nation = models.CharField(max_length=200)
 
 
+# replace with a Field.choices
 class Language(models.Model):
     language_code = models.CharField(max_length=2, primary_key=True)
     language_name = models.CharField(max_length=200)
@@ -36,21 +38,8 @@ class Publisher(models.Model):
 
 # for a book. e.g. lit fic, fantasy, gonzo, i dunno just whatever
 # class Genre(models.Model):
-#    genre = models.BigAutoField(primary_key=True)
 #    genre_name = models.CharField(max_length=200)
-
-
-# class WorkXGenre(models.Model):
-#    work = models.ForeignKey("Work", on_delete=models.PROTECT)
-#    genre = models.ForeignKey("Genre", on_delete=models.PROTECT)
-
 
 # for authors. e.g. modernism, conservative, existentialism. i dunno, another thing to think about
 # class Movement(models.Model):
-#    movement = models.BigAutoField(primary_key=True)
 #    movement_name = models.CharField(max_length=200)
-
-
-# class AuthorXMovement(models.Model):
-#    author = models.ForeignKey("Author", on_delete=models.PROTECT)
-#    movement = models.ForeignKey("Movement", on_delete=models.PROTECT)
