@@ -1,5 +1,6 @@
 
 https://docs.djangoproject.com/en/6.0/ref/models/fields
+https://django-ninja.dev/guide/
 
 # opinions and notes
 
@@ -8,10 +9,14 @@ it works great with heirarchical inheritance and not great with traits or mixins
 putting classnames in text to get around circular inheritance is a neat workaround but still a workaround
 pylance is a static analysis and doesn't understand dynamically generated variables and fns that django models have
 mypy is a static anlysis that can, with django-stubs
+chatgpt didn't know that that problem was coming, and initially recommended pylance without caveats
 uv doesn't seem much better than anything that came before it, but it is nice to not have to run venv all the time
 ruff is for formatting and removing unused imports
 this is a lot of workarounds for using a dynamic type checking language
 should've just used go
+i think all i want in life is go with native algebraic data types
+instal django-extensions to see a list of urls
+i miss Result<T, E>. it should be required by law
 
 # uv notes
 
@@ -127,16 +132,6 @@ get a book info from a picture
 A good test of the book collator is if it can recognize the various Martin Fierro El Gaucho as the same work
 lots of sites have trouble with that
 
-a personal canon, you're own top 8. like the myspace 8 favorite.
+a personal canon, your own top 8. like the myspace 8 favorite.
 
-# useful shell
-
-counts lines of code
-
-```
-rg --pcre2 --glob '*.py' \
-  --glob '!**/migrations/**' \
-  --glob '!**/__pycache__/**' \
-  --glob '!**/__init__.py' \
-  '^(?!\s*(?:from\b|import\b|$)).*\S' | wc -l
-```
+add soft delete to proveance_import, which makes all it's import data unusable for future consolidation

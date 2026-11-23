@@ -31,7 +31,6 @@ ALLOWED_HOSTS: list[str] = []
 # Application definition
 
 INSTALLED_APPS = [
-    "polls.apps.PollsConfig",
     "books.apps.BooksConfig",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -39,6 +38,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    "django_extensions",
 ]
 
 MIDDLEWARE = [

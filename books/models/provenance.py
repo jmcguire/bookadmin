@@ -22,11 +22,17 @@ class ProvenanceEdition(ProvenanceFieldsMixin):
         "ProvenanceImport", on_delete=models.PROTECT, related_name="editions"
     )
 
+    def __str__(self):
+        return f"{self.external_id} {self.revision}"
+
 
 class ProvenanceWork(ProvenanceFieldsMixin):
     provenance_import = models.ForeignKey(
         "ProvenanceImport", on_delete=models.PROTECT, related_name="works"
     )
+
+    def __str__(self):
+        return f"{self.external_id} {self.revision}"
 
 
 class ProvenanceEditionToWorkMapping(models.Model):
@@ -45,6 +51,9 @@ class ProvenanceAuthor(ProvenanceFieldsMixin):
         "ProvenanceImport", on_delete=models.PROTECT, related_name="authors"
     )
 
+    def __str__(self):
+        return f"{self.external_id} {self.revision}"
+
 
 # often a bunch of import records come from a single batch
 class ProvenanceImport(models.Model):
@@ -52,12 +61,17 @@ class ProvenanceImport(models.Model):
     uri = models.CharField(
         max_length=200, null=True
     )  # some globally unique identifier?
-    imported = models.DateTimeField(auto_now_add=True)
+    imported_on = models.DateTimeField(auto_now_add=True)
     filename = models.CharField(
         max_length=200
     )  # replace with FileField or FilePathField?
+    results = models.JSONField(null=True, blank=True)
+
+    def __str__(self):
+        return f"{self.provider} {self.filename} {self.imported_on.strftime('%Y-%m-%d %H:%M:%S')}"
 
     def stats(self):
+        # todo return an object instead
         return {
             "editions": self.editions.count(),
             "works": self.works.count(),

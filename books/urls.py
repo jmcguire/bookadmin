@@ -1,7 +1,7 @@
 from django.urls import path
 
 from . import views
-from .apis.imports import imports_api
+from .services.fileimport.api import imports_api
 
 app_name = "books"
 urlpatterns = [
