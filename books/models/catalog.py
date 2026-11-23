@@ -49,6 +49,7 @@ class Work(TimeStampedFieldsMixin):
     default_cover = models.ForeignKey(
         "books.Cover", on_delete=models.PROTECT, null=True, blank=True
     )
+    # todo what about anthologies with multiple authors and an editor?
 
 
 class Author(TimeStampedFieldsMixin):
@@ -64,7 +65,13 @@ class Author(TimeStampedFieldsMixin):
     )
     birth = models.DateField(null=True, blank=True)
     death = models.DateField(null=True, blank=True)
-    description = models.CharField(max_length=200)
+    bio_short = models.CharField(
+        max_length=80
+    )  # one sentence, has an implicit "{name} " before it. e.g. " is a celebrated childrens author."
+    bio = models.CharField(max_length=500)  # one paragraph
+    source_ids = models.JSONField(
+        null=True, blank=True
+    )  # for e.g. openlibrary, wikidata, lc_naf, etc
 
     def save(self, **kwargs):
         # or use GeneratedField?

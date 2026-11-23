@@ -11,7 +11,8 @@ class ProvenanceFieldsMixin(models.Model):
         null=True,
         blank=True,
     )
-    data = models.JSONField()
+    data = models.JSONField(null=True, blank=True)
+    unprocessed_data = models.JSONField(null=True, blank=True)
 
     class Meta:
         abstract = True
