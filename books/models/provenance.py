@@ -6,11 +6,7 @@ from django.db import models
 
 class ProvenanceFieldsMixin(models.Model):
     external_id = models.CharField(max_length=200)
-    revision = models.CharField(
-        max_length=200,
-        null=True,
-        blank=True,
-    )
+    revision = models.CharField(max_length=200)
     data = models.JSONField(null=True, blank=True)
     unprocessed_data = models.JSONField(null=True, blank=True)
 
@@ -26,6 +22,14 @@ class ProvenanceEdition(ProvenanceFieldsMixin):
     def __str__(self):
         return f"{self.external_id} {self.revision}"
 
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["external_id", "revision"],
+                name="unique_provenance_edition_external_id_and_revision",
+            )
+        ]
+
 
 class ProvenanceWork(ProvenanceFieldsMixin):
     provenance_import = models.ForeignKey(
@@ -35,16 +39,29 @@ class ProvenanceWork(ProvenanceFieldsMixin):
     def __str__(self):
         return f"{self.external_id} {self.revision}"
 
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["external_id", "revision"],
+                name="unique_provenance_work_external_id_and_revision",
+            )
+        ]
+
 
 class ProvenanceEditionToWorkMapping(models.Model):
+    provenance_edition_external_id = models.CharField(max_length=100)
+    provenance_work_external_id = models.CharField(max_length=100)
+
     provenance_edition = models.ForeignKey(
-        "ProvenanceEdition", on_delete=models.PROTECT
+        "ProvenanceEdition", on_delete=models.PROTECT, null=True, blank=True
     )
-    provenance_work = models.ForeignKey("ProvenanceWork", on_delete=models.PROTECT)
+    provenance_work = models.ForeignKey(
+        "ProvenanceWork", on_delete=models.PROTECT, null=True, blank=True
+    )
+
     provenance_import = models.ForeignKey(
         "ProvenanceImport", on_delete=models.PROTECT, related_name="mappings"
     )
-    revision = models.CharField(max_length=200)
 
 
 class ProvenanceAuthor(ProvenanceFieldsMixin):
@@ -54,6 +71,14 @@ class ProvenanceAuthor(ProvenanceFieldsMixin):
 
     def __str__(self):
         return f"{self.external_id} {self.revision}"
+
+    class Meta:
+        constraints = [
+            models.UniqueConstraint(
+                fields=["external_id", "revision"],
+                name="unique_provenance_author_external_id_and_revision",
+            )
+        ]
 
 
 # often a bunch of import records come from a single batch

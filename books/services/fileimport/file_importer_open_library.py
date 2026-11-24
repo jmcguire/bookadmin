@@ -18,7 +18,7 @@ from books.services.fileimport.data_in_provenance import (
     EditionInProvenance,
     WorkInProvenance,
 )
-from books.services.fileimport.FileImportStats import FileImportStats
+from books.services.fileimport.file_import_stats import FileImportStats
 
 
 class OpenLibraryColumns(IntEnum):
@@ -92,6 +92,7 @@ class FileImporterOpenLibrary:
                             data=work.data.__dict__,
                             provenance_import=imp,
                         )
+
                     elif content["type"] == "/type/edition":
                         edition = convert_edition(content["data"])
                         if not edition:
@@ -104,6 +105,9 @@ class FileImporterOpenLibrary:
                             data=edition.data.__dict__,
                             provenance_import=imp,
                         )
+
+                        # todo create tables in ProvenanceEditionToWorkMapping based on here
+
                     elif content["type"] == "/type/author":
                         author = convert_author(content["data"])
                         if not author:
@@ -116,6 +120,7 @@ class FileImporterOpenLibrary:
                             data=author.data.__dict__,
                             provenance_import=imp,
                         )
+
                     else:
                         print("unknown type: " + content["type"])
                         self.failed += 1
@@ -223,7 +228,7 @@ def convert_author(author_json) -> AuthorInProvenance | None:
         author.external_id = author_json["key"]
         author.revision = author_json["revision"]
         author.data.name = author_json["name"]  # or author_json["personal_name"]
-    except KeyError, IndexError, TypeError:
+    except KeyError, IndexError, TypeError, ValueError:
         return None
 
     author.data.bio = author_json.get("bio", "")
@@ -231,13 +236,15 @@ def convert_author(author_json) -> AuthorInProvenance | None:
     try:
         date_obj = datetime.strptime(author_json["birth_date"], "%d %B %Y")
         author.data.birthday = date_obj.strftime("%Y-%m-%d")
-    except KeyError, IndexError, TypeError:
+        # todo birth_date is sometimes just a year
+        # need a second column birthyear
+    except KeyError, IndexError, TypeError, ValueError:
         pass
 
     try:
         date_obj = datetime.strptime(author_json["death_date"], "%d %B %Y")
         author.data.deathday = date_obj.strftime("%Y-%m-%d")
-    except KeyError, IndexError, TypeError:
+    except KeyError, IndexError, TypeError, ValueError:
         pass
 
     # author.data.given_name = ""

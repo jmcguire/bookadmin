@@ -1,5 +1,4 @@
 #!/bin/bash
-set -e
 
 rm -f db.sqlite3
 find books/migrations -name '0*.py' -delete

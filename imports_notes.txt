@@ -1,0 +1,184 @@
+NOTES ON AUTHORS
+
+
+OL2962563A
+vassili grossman
+    personal_name is in english, name is in russian
+    bio is russian first half, then a ---- then english second half
+    birth_date and death_date is just a year, not a full date
+
+/authors/OL2699407A
+name is butler?
+    this isn't a real person, a lot of books have an author "butler", and it's all marked under this person
+
+/authors/OL18404A
+homer
+    "personal_name": "Homer.",
+    "name": "Ὅμηρος",
+    "title": "ca. 8th-7th cent. B.C.",
+    bio is first half greek, second half english
+
+/authors/OL34745A
+Percival L. Everett
+    "bio": {
+      "type": "/type/text",
+      "value": "American writer and Distinguished Professor of English at the University of Southern California."
+    },
+
+/authors/OL19496A
+James M. McPherson
+    "birth_date": "11 Oct 1936",
+
+/authors/OL6893313A
+Simon Schama
+    "birth_date": "13 February 1945",
+
+/authors/OL2632710A
+"name": "Homer;  Translator  Michael Reck",
+
+/authors/OL3108782A
+"name": "Samuel (translator) Butler",
+
+/authors/OL29809A
+    "personal_name": "Bloom, Harold.",
+    "name": "Harold Bloom",
+
+/authors/OL30717A
+    "name": "Mark Bowden",
+    "personal_name": "Mark Bowden",
+
+
+NOTES ON WORKS
+
+
+first_publish_date:
+ - "February 3, 2003"
+ - "1989"
+ - "1980"
+
+/works/OL61981W"
+    "title": "Ἰλιάς",
+    the description comes from the lattimore edition
+
+some works have a dewey_number. wish they all did. (it's an array of deweys)
+
+lc_classifications library of congress classification call numners
+
+/works/OL14858392W
+To Say Nothing of the Dog
+    a poor description
+    "description": {
+      "type": "/type/text",
+      "value": "Connie Willis' entertaining comedy inspired by Jerome K. Jerome's [Three Men in a Boat (to say nothing of the dog)][1]. \r\n\r\n[Robert A. Heinlein][2] mentioned the earlier work in [Have Spacesuit will Travel][3] as Kip's father's favorite.\r\n\r\n\r\n  [1]: https://openlibrary.org/works/OL1793164W/Three_Men_in_a_Boat_(to_say_nothing_of_the_dog)\r\n  [2]: https://openlibrary.org/authors/OL28641A/Robert_A._Heinlein\r\n  [3]: https://openlibrary.org/works/OL59727W/Have_Space_Suit_Will_Travel"
+
+/works/OL51158W
+Battle Cry of Freedom Part 1 of 3
+    why part 1 of 3?
+    figured it out. one of the editions is a audio cassette edition in three parts. for some reason the name came from there.
+    just a mistake
+    but a lame one
+
+some of the descriptions are just reviews
+
+
+NOTES ON EDITIONS
+
+
+getting to the translators linked author ID will require some work
+
+
+/books/OL26979152M
+    "full_title": "The Iliad of Homer done into English verse",
+    "subtitle": "done into English verse",
+    "title": "The Iliad of Homer",
+    "work_titles": [
+      "Iliad"
+    ],
+    what a pile of title options
+
+/books/OL18628128M
+    "subtitle": "translated by Alexander Pope.",
+    "contributions": [
+      "Pope, Alexander, 1688-1744,"
+    ],
+    "title": "The Iliad of Homer",
+    "authors": [
+      {
+        "key": "/authors/OL18404A"
+      }
+    ],
+    that author is for homer, not for pope
+    need to turn that contributor into an author id
+
+publisher is not normalized
+some examples (and there's a lot)
+a lot of this matching can be automated, but it's still going to be a lot of regular finagaling
+
+  "Whittaker & Co."
+  "Whittaker & Co.",
+  "Whittaker"
+  "Viking Penguin"
+  "Viking"
+  "Viking",
+  "Vintage Books"
+  "Vintage Books",
+  "Vintage Classics"
+  "Vintage Publishing",
+  "Vintage"
+  "University of Chicago Press"
+  "University Of Chicago Press"
+  "Univ of Chicago Pr (T)"
+  "Typis Guliel. Botham; impensis Jacobi et Johannis Knapton ..."
+  "Typis Guliel. Botham; impensis Jacobi et Johannis Knapton"
+  "typis Guliel. Botham. Impensis Jacobi et Johannis Knapton"
+  "Typis Guliel. Botham",
+  "The Macmillan Co."
+  "The Macmillan company"
+  "The Macmillan Company"
+  "Macmillam"
+  "Macmillan and co., limited"
+  "Macmillan and Co., Limited"
+  "Macmillan and Co., limited",
+  "Macmillan Audio"
+  "Macmillan Education"
+  "Macmillan"
+  "MacMillan"
+  "T.Y. Crowell & company"
+  "T.Y. Crowell"
+  "Sumtibus et typis Car. Tauchnitii"
+  "Sumtibus et typis Caroli Tauchnitii"
+  "Sumtibus et Typis Caroli Tauchnitii"
+  "Société d'édition \"Les Belles lettres,\""
+  "Société d'édition \"Les Belles lettres\""
+  "Signet Classic"
+  "Signet Classics"
+  "Routledge & K. Paul"
+  "Routledge & Kegan Paul"
+  "Routledge & Kegan Poul"
+  "Routledge and Kegan Paul"
+  "Routledge"
+  "Longman & Co. [etc.]"
+  "Longman, Brown, Green et T. and W. Longman"
+  "Longman's, Green"
+  "Longman"
+  "Longmans & Co."
+  "Longmans and Co."
+  "Longmans, Green"
+  "Longmans"
+
+/books/OL2225803M
+    "contributors": [
+      {
+        "role": "Translator",
+        "name": "Robert Fagles"
+      },
+      {
+        "role": "Introduction",
+        "name": "Bernard Knox"
+      }
+    ],
+    "contributions": [
+      "Fagles, Robert.",
+      "Knox, Bernard MacGregor Walker."
+    ],
+    "by_statement": "Homer ; translated by Robert Fagles ; introduction and notes by Bernard Knox.",

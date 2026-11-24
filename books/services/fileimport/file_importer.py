@@ -1,6 +1,6 @@
 from abc import abstractmethod
 
-from books.services.fileimport.FileImportStats import FileImportStats
+from books.services.fileimport.file_import_stats import FileImportStats
 
 
 class FileImporter:

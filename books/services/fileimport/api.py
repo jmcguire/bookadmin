@@ -4,8 +4,8 @@ from ninja import NinjaAPI
 from ninja.errors import HttpError
 
 from ...models import ProvenanceImport
-from .FileImporter import FileImporter
-from .FileImporterOpenLibrary import FileImporterOpenLibrary
+from .file_importer import FileImporter
+from .file_importer_open_library import FileImporterOpenLibrary
 
 imports_api = NinjaAPI()
 
@@ -31,7 +31,7 @@ def get_files(request):
         imp_hash[imp.filename] = imp
 
     files = []
-    for file in downloads.iterdir():
+    for file in downloads.glob("*.gz"):
         files.append({"file": file.name, "import": imp_hash.get(file, None)})
 
     if not files:
