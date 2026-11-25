@@ -2,9 +2,9 @@ from ninja import Schema
 
 
 class UnprocessedFromImport(Schema):
-    authors: list = []
-    editions: list = []
-    works: list = []
+    authors: list[str] = []
+    editions: list[str] = []
+    works: list[str] = []
 
 
 class UnprocessedStats(Schema):
@@ -17,7 +17,7 @@ class UnprocessedStats(Schema):
 
 
 class UnprocessedRecords(Schema):
-    unprocessed_records: list = []
+    unprocessed_records: list[str] = []
 
 
 class ProcessingStats(Schema):

@@ -27,6 +27,7 @@ class ProvenanceAuthorAdmin(admin.ModelAdmin):
         "external_id",
         "revision",
         "provenance_import",
+        "processed",
         "pretty_data",
     ]
     exclude = ["unprocessed_data"]
@@ -37,6 +38,10 @@ class ProvenanceAuthorAdmin(admin.ModelAdmin):
             "<pre style='white-space: pre-wrap'>{}</pre>",
             json.dumps(obj.unprocessed_data, indent=2, ensure_ascii=False),
         )
+
+    @admin.display(description="Processed Record")
+    def processed(self, obj):
+        return getattr(obj, "processed", None)
 
 
 @admin.register(ProvenanceWork)
@@ -46,6 +51,7 @@ class ProvenanceWorkAdmin(admin.ModelAdmin):
         "external_id",
         "revision",
         "provenance_import",
+        "processed",
         "pretty_data",
     ]
     exclude = ["unprocessed_data"]
@@ -56,6 +62,10 @@ class ProvenanceWorkAdmin(admin.ModelAdmin):
             "<pre style='white-space: pre-wrap'>{}</pre>",
             json.dumps(obj.unprocessed_data, indent=2, ensure_ascii=False),
         )
+
+    @admin.display(description="Processed Record")
+    def processed(self, obj):
+        return getattr(obj, "processed", None)
 
 
 @admin.register(ProvenanceEdition)
@@ -65,6 +75,7 @@ class ProvenanceEditionAdmin(admin.ModelAdmin):
         "external_id",
         "revision",
         "provenance_import",
+        "processed",
         "pretty_data",
     ]
     exclude = ["unprocessed_data"]
@@ -75,3 +86,7 @@ class ProvenanceEditionAdmin(admin.ModelAdmin):
             "<pre style='white-space: pre-wrap'>{}</pre>",
             json.dumps(obj.unprocessed_data, indent=2, ensure_ascii=False),
         )
+
+    @admin.display(description="Processed Record")
+    def processed(self, obj):
+        return getattr(obj, "processed", None)

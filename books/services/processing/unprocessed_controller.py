@@ -30,42 +30,42 @@ class UnprocessedController:
 
         return stats
 
-    def list_authors(self, import_id) -> list | None:
+    def list_authors(self, import_id: int) -> list | None:
         if import_id:
-            imp = ProvenanceImport.objects.get(import_id)
+            imp = ProvenanceImport.objects.get(pk=import_id)
             if not imp:
                 return None
-            return list(imp.authors.filter(processed__isnull=True))
+            return list(imp.authors.unprocessed_external_ids())
         else:
-            return list(ProvenanceAuthor.objects.filter(processed__isnull=True))
+            return list(ProvenanceAuthor.objects.unprocessed_external_ids())
 
-    def list_editions(self, import_id) -> list | None:
+    def list_editions(self, import_id: int) -> list | None:
         if import_id:
-            imp = ProvenanceImport.objects.get(import_id)
+            imp = ProvenanceImport.objects.get(pk=import_id)
             if not imp:
                 return None
-            return list(imp.authors.filter(processed__isnull=True))
+            return list(imp.editions.unprocessed_external_ids())
         else:
-            return list(ProvenanceEdition.objects.filter(processed__isnull=True))
+            return list(ProvenanceEdition.objects.unprocessed_external_ids())
 
-    def list_works(self, import_id) -> list | None:
+    def list_works(self, import_id: int) -> list | None:
         if import_id:
-            imp = ProvenanceImport.objects.get(import_id)
+            imp = ProvenanceImport.objects.get(pk=import_id)
             if not imp:
                 return None
-            return list(imp.authors.filter(processed__isnull=True))
+            return list(imp.works.unprocessed_external_ids())
         else:
-            return list(ProvenanceWork.objects.filter(processed__isnull=True))
+            return list(ProvenanceWork.objects.unprocessed_external_ids())
 
-    def list_from_import(self, import_id) -> UnprocessedFromImport | None:
-        imp = ProvenanceImport.objects.get(import_id)
+    def list_from_import(self, import_id: int) -> UnprocessedFromImport | None:
+        imp = ProvenanceImport.objects.get(pk=import_id)
         if not imp:
             return None
 
         unconverted_from_import = UnprocessedFromImport()
 
-        unconverted_from_import.authors = imp.authors.filter(processed__isnull=True)
-        unconverted_from_import.editions = imp.authors.filter(processed__isnull=True)
-        unconverted_from_import.works = imp.authors.filter(processed__isnull=True)
+        unconverted_from_import.authors = list(imp.authors.unprocessed_external_ids())
+        unconverted_from_import.editions = list(imp.editions.unprocessed_external_ids())
+        unconverted_from_import.works = list(imp.works.unprocessed_external_ids())
 
         return unconverted_from_import

@@ -1,3 +1,5 @@
+from typing import Literal
+
 from django.db import models
 
 # incoming data from various services
@@ -5,10 +7,17 @@ from django.db import models
 # (that part happens in the convert models)
 
 
+class ProvenanceQuerySet(models.QuerySet):
+    def unprocessed_external_ids(self) -> list[str]:
+        return list(self.filter(processed__isnull=True).values_list("external_id", flat=True))
+
+
 class ProvenanceFieldsMixin(models.Model):
     external_id = models.CharField(max_length=200)
     revision = models.CharField(max_length=200)
     unprocessed_data = models.JSONField(null=True, blank=True)
+
+    objects = ProvenanceQuerySet.as_manager()
 
     class Meta:
         abstract = True
@@ -20,7 +29,7 @@ class ProvenanceEdition(ProvenanceFieldsMixin):
     )
 
     def __str__(self):
-        return f"{self.external_id} {self.revision}"
+        return f"{self.id} {self.external_id} {self.revision}"
 
     class Meta:
         constraints = [
@@ -37,7 +46,7 @@ class ProvenanceWork(ProvenanceFieldsMixin):
     )
 
     def __str__(self):
-        return f"{self.external_id} {self.revision}"
+        return f"{self.id} {self.external_id} {self.revision}"
 
     class Meta:
         constraints = [
@@ -54,7 +63,7 @@ class ProvenanceAuthor(ProvenanceFieldsMixin):
     )
 
     def __str__(self):
-        return f"{self.external_id} {self.revision}"
+        return f"{self.id} {self.external_id} {self.revision}"
 
     class Meta:
         constraints = [
@@ -74,7 +83,7 @@ class ProvenanceImport(models.Model):
     results = models.JSONField(null=True, blank=True)
 
     def __str__(self):
-        return f"{self.provider} {self.filename} {self.imported_on.strftime('%Y-%m-%d %H:%M:%S')}"
+        return f"{self.id} {self.provider} {self.filename} {self.imported_on.strftime('%Y-%m-%d %H:%M:%S')}"
 
     def stats(self):
         # todo return an object instead

@@ -5,7 +5,7 @@ from django.db import models
 
 
 class ProcessedEdition(models.Model):
-    provenance_edition = models.ForeignKey(
+    provenance_edition = models.OneToOneField(
         "books.ProvenanceEdition", on_delete=models.PROTECT, related_name="processed"
     )
     data = models.JSONField(null=True, blank=True)
@@ -15,7 +15,7 @@ class ProcessedEdition(models.Model):
 
 
 class ProcessedWork(models.Model):
-    provenance_work = models.ForeignKey(
+    provenance_work = models.OneToOneField(
         "books.ProvenanceWork", on_delete=models.PROTECT, related_name="processed"
     )
     data = models.JSONField(null=True, blank=True)
@@ -25,7 +25,7 @@ class ProcessedWork(models.Model):
 
 
 class ProcessedAuthor(models.Model):
-    provenance_author = models.ForeignKey(
+    provenance_author = models.OneToOneField(
         "books.ProvenanceAuthor", on_delete=models.PROTECT, related_name="processed"
     )
     data = models.JSONField(null=True, blank=True)

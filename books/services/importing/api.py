@@ -18,7 +18,7 @@ def get_imports(request):
 
 
 @import_api.get("import/{import_id}", response=ProvenanceImportOut)
-def get_import(request, import_id):
+def get_import(request, import_id: int):
     imp = get_object_or_404(ProvenanceImport, import_id)
     return imp
 
@@ -42,7 +42,7 @@ def get_files(request):
 
 
 @import_api.post("files/{filename}/import", response=FileImportResults)
-def import_file(request, filename):
+def import_file(request, filename: str):
     fileimporter: FileImporter = FileImporterOpenLibrary(filename)
 
     if not fileimporter.check_file():

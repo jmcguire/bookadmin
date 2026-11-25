@@ -1,7 +1,7 @@
-from enum import Enum
+from enum import StrEnum
 
 
-class CatalogType(Enum):
+class CatalogType(StrEnum):
     AUTHOR = "author"
     EDITION = "edition"
     WORK = "work"
