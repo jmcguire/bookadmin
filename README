@@ -168,3 +168,19 @@ a personal canon, your own top 8. like the myspace 8 favorite.
 add soft delete to proveance_import, which makes all it's import data unusable for future consolidation
 
 integrate with internet archive for lendable books, open downloads for public domain books, librevox for public-domain audiobooks, the user's local library for lendab lendable books, libby for lendable ebooks. then link to to paid services for audiobooks, kindle ebooks, amazon, whatever
+
+# useful commands
+
+find any books in a gzip file that contain the ids in ids.txt
+get only the JSON
+format it into one giant list so that jq can format it correctly
+
+```
+rg -z -Ff works_ids.txt ol_dump_editions_2026-10-31.txt.gz | cut -f5 | perl -nE'BEGIN{say "["} END{say "]"} say $_ . ","' >editions.json
+```
+
+then to look for all values of a certain json attribute
+
+```
+» jq '.[].by_statement | values' editions.json
+```

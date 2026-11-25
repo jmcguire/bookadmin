@@ -1,10 +1,10 @@
 from django.contrib import admin
 
-from books.models import Work
+from books.models import CatalogEdition
 
 
-@admin.register(Work)
-class WorkAdmin(admin.ModelAdmin):
+@admin.register(CatalogEdition)
+class EditionAdmin(admin.ModelAdmin):
     search_fields = ["title"]
     readonly_fields = [
         "created_at",
@@ -17,11 +17,22 @@ class WorkAdmin(admin.ModelAdmin):
             {
                 "fields": (
                     "title",
-                    "author",
+                    "work",
+                    "year_published",
+                )
+            },
+        ),
+        (
+            "Optional",
+            {
+                "fields": (
                     "description",
-                    "language",
-                    "year_first_published",
+                    "translator",
+                    "introduction_by",
                     "default_cover",
+                    "publisher",
+                    "pages",
+                    "language",
                 )
             },
         ),

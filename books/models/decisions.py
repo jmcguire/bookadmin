@@ -15,7 +15,7 @@ class DecisionAndOverrides(models.Model):
 
 class DecisionEdition(TimeStampedFieldsMixin, DecisionAndOverrides):  # pyright: ignore[reportIncompatibleVariableOverride]
     edition = models.OneToOneField(
-        "books.Edition",
+        "books.CatalogEdition",
         on_delete=models.CASCADE,
         primary_key=True,
         related_name="decision",
@@ -24,7 +24,7 @@ class DecisionEdition(TimeStampedFieldsMixin, DecisionAndOverrides):  # pyright:
 
 class DecisionWork(TimeStampedFieldsMixin, DecisionAndOverrides):  # pyright: ignore[reportIncompatibleVariableOverride]
     work = models.OneToOneField(
-        "books.Work",
+        "books.CatalogWork",
         on_delete=models.PROTECT,
         primary_key=True,
         related_name="decision",
@@ -32,15 +32,15 @@ class DecisionWork(TimeStampedFieldsMixin, DecisionAndOverrides):  # pyright: ig
 
 
 class DecisionEditionToWork(TimeStampedFieldsMixin):
-    edition = models.ForeignKey("books.Edition", on_delete=models.PROTECT)
+    edition = models.ForeignKey("books.CatalogEdition", on_delete=models.PROTECT)
     # ? not sure about this one
-    forced_work = models.ForeignKey("books.Work", on_delete=models.PROTECT)
+    forced_work = models.ForeignKey("books.CatalogWork", on_delete=models.PROTECT)
     decision = models.JSONField()
 
 
 class DecisionAuthor(TimeStampedFieldsMixin, DecisionAndOverrides):  # pyright: ignore[reportIncompatibleVariableOverride]
     author = models.OneToOneField(
-        "books.Author",
+        "books.CatalogAuthor",
         on_delete=models.PROTECT,
         primary_key=True,
         related_name="decision",

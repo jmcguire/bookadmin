@@ -1,0 +1,1564 @@
+[
+  {
+    "name": "Miguel Sepulvida",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2020-08-02T01:13:35.381267"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2020-08-02T01:13:35.381267"
+    },
+    "latest_revision": 1,
+    "key": "/authors/OL8033754A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Victor Ambrus",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T13:35:46.87638"
+    },
+    "key": "/authors/OL2623183A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Василий Семёнович Гроссман",
+    "bio": {
+      "type": "/type/text",
+      "value": "Васи́лий Семёнович Гро́ссман (настоящее имя — Ио́сиф Соломо́нович Гро́ссман; 29 ноября (12 декабря) 1905, Бердичев — 14 сентября 1964, Москва) — русский советский писатель и журналист, военный корреспондент, подполковник интендантской службы. Он родился в еврейской семье на Украине, которая тогда входила в состав Российской империи. Главная книга писателя — роман «Жизнь и судьба» — был конфискован в 1961 году КГБ, чудом сохранён, тайно вывезен на микрофильме и впервые опубликован только в 1980 году в Швейцарии, в Лозанне (под редакцией Шимона Маркиша и Ефима Эткинда). Его показания о нацистских лагерях смерти, написанные после освобождения Треблинки, являются одним из самых ранних письменных документов о Холокосте среди евреев и были использованы в качестве доказательств на Нюрнбергском процессе.\r\n\r\n\r\n----------\r\n\r\n\r\nVasily Semenovich Grossman (real name: Iosif Solomonovich Grossman; November 29 (December 12), 1905, Berdichev – September 14, 1964, Moscow) was a Russian Soviet writer and journalist, war correspondent, and lieutenant colonel in the quartermaster service. He was born to a Jewish family in Ukraine, which was then part of the Russian Empire. His main work, the novel Life and Fate, was confiscated in 1961 by the KGB, miraculously preserved, secretly exported on microfilm, and first published only in 1980 in Lausanne, Switzerland (edited by Shimon Markish and Yefim Etkind). His testimony about the Nazi death camps, written after the liberation of Treblinka, is one of the earliest written documents about the Holocaust among Jews and was used as evidence at the Nuremberg Trials."
+    },
+    "birth_date": "1905",
+    "source_records": [
+      "bwb:9780099560630",
+      "amazon:6052100125",
+      "promise:bwb_daily_pallets_2023-05-22:O6-BHO-556",
+      "marc:harvard_bibliographic_metadata/ab.bib.11.20150123.full.mrc:865861068:836",
+      "marc:harvard_bibliographic_metadata/ab.bib.10.20150123.full.mrc:234647498:680",
+      "amazon:5170229100",
+      "ia:brievenaanmijnmo0000gros"
+    ],
+    "remote_ids": {
+      "wikidata": "Q313767",
+      "viaf": "100237427",
+      "isni": "000000012031454X",
+      "imdb": "nm0343728",
+      "lc_naf": "n82043325",
+      "librarything": "grossmanvasily",
+      "opac_sbn": "CFIV032578"
+    },
+    "death_date": "1964",
+    "personal_name": "Vasiliĭ Semenovich Grossman",
+    "type": {
+      "key": "/type/author"
+    },
+    "alternate_names": [
+      "Vassili Grossman",
+      "Vasily Grossman",
+      "Vasiliĭ Semenovich Grossman",
+      "Vasiliĭ Grossman",
+      "Vasilii Grossman",
+      "Vassiliĭ Semenovich Grossman",
+      "VASILII SEMENOVICH GROSSMAN",
+      "Vasily GROSSMAN",
+      "Vasily Semyonovich Grossman",
+      "Васи́лий Семёнович Гро́ссман",
+      "Grossman Vasily",
+      "Vasilii Semenovich Grossman",
+      "Vasiliǐ Semenovich Grossman",
+      "Vasiliĭ Semenovich Grossman",
+      "Vasili Grossman",
+      "GROSSMAN,VASSILI",
+      "Wassili Grossman",
+      "Vasili?i Semenovich Grossman",
+      "Vasiliy Grossman",
+      "Vasilij Grossman"
+    ],
+    "key": "/authors/OL2962563A",
+    "photos": [
+      15169132
+    ],
+    "latest_revision": 10,
+    "revision": 10,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T15:03:11.581851"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2026-02-11T14:41:35.758335"
+    }
+  },
+  {
+    "name": "Mark Bowden",
+    "bio": {
+      "type": "/type/text",
+      "value": "Mark Robert Bowden (born July 17, 1951) is an American writer and author. He has been The Distinguished Writer in Residence at The University of Delaware since 2013. He is a contributing editor at Vanity Fair and also a National Correspondent for The Atlantic. From 1979 to 2003, Bowden was a staff writer for The Philadelphia Inquirer. Over the years, he has written for The New Yorker, Men's Journal, The Atlantic, Sports Illustrated, and Rolling Stone. He has won several awards for his writing. As a result of his book *Black Hawk Down: A Story of Modern War*, Bowden has received international recognition. The book was made into a 2001 movie directed by Ridley Scott. - Wikipedia"
+    },
+    "birth_date": "17 Jul 1951",
+    "personal_name": "Mark Bowden",
+    "title": "(Bowden, Mark, 1951- )",
+    "photos": [
+      7435714
+    ],
+    "source_records": [
+      "ia:blackhawkdown0000bowd_v9f8"
+    ],
+    "remote_ids": {
+      "viaf": "88081766",
+      "wikidata": "Q2273582",
+      "isni": "0000000122537587",
+      "goodreads": "3098",
+      "imdb": "nm0100736",
+      "lc_naf": "n94022433",
+      "librarything": "bowdenmark-1",
+      "opac_sbn": "UBOV026293"
+    },
+    "type": {
+      "key": "/type/author"
+    },
+    "key": "/authors/OL30717A",
+    "latest_revision": 11,
+    "revision": 11,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-01T03:28:50.625462"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2025-07-31T21:39:53.395344"
+    }
+  },
+  {
+    "name": "Evelyn Abbott",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T01:11:43.450936"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T01:11:43.450936"
+    },
+    "key": "/authors/OL5995438A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Nick McCarthy",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T15:03:11.581851"
+    },
+    "key": "/authors/OL2829411A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Colin W. Macleod",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T15:03:11.581851"
+    },
+    "key": "/authors/OL2764204A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "HOMER.",
+    "personal_name": "HOMER.",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-09-12T15:13:03.180943"
+    },
+    "key": "/authors/OL4589724A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Polly Jones",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T13:35:46.87638"
+    },
+    "key": "/authors/OL2697900A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Peter von der Mühll",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-30T09:38:13.731961"
+    },
+    "key": "/authors/OL3167765A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Theodore Alois Buckley",
+    "source_records": [
+      "ia:council00buck",
+      "amazon:1706950314",
+      "bwb:9798775067250",
+      "bwb:9781656878014",
+      "bwb:9798664463187",
+      "bwb:9781014991485",
+      "bwb:9781016415095"
+    ],
+    "remote_ids": {
+      "viaf": "45879798",
+      "wikidata": "Q7781676",
+      "isni": "0000000122793783",
+      "musicbrainz": "a7abca52-6163-417b-b58a-123cccb3570e",
+      "lc_naf": "n88630369",
+      "librivox": "6811",
+      "project_gutenberg": "25301",
+      "opac_sbn": "LIAV154499"
+    },
+    "death_date": "1856",
+    "type": {
+      "key": "/type/author"
+    },
+    "birth_date": "1825",
+    "personal_name": "Theodore Alois Buckley",
+    "alternate_names": [
+      "Theodore Alois W . Buckley",
+      "Theodore William Alois Buckley",
+      "T. A. Buckley",
+      "Theodore Alois Theodore Alois Buckley",
+      "Theodore Aloxis Buckley",
+      "T. a Buckley",
+      "Theodore Alois 1825-1856 Buckley",
+      "Theodore Alors W. Buckley"
+    ],
+    "key": "/authors/OL2506673A",
+    "latest_revision": 9,
+    "revision": 9,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-01T03:28:50.625462"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2025-07-31T21:03:15.028168"
+    }
+  },
+  {
+    "name": "Robert Chandler",
+    "personal_name": "Robert Chandler",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-08-20T04:02:24.135771"
+    },
+    "key": "/authors/OL2077697A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 2
+  },
+  {
+    "name": "Romain Slocombe",
+    "personal_name": "Romain Slocombe",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-09-12T23:35:42.8548"
+    },
+    "key": "/authors/OL1246513A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 2
+  },
+  {
+    "name": "Robert Fitzgerald",
+    "personal_name": "Robert Fitzgerald",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-09-04T05:10:37.711236"
+    },
+    "key": "/authors/OL2526947A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 2
+  },
+  {
+    "name": "Homère",
+    "personal_name": "Homère",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2011-07-21T20:33:52.160086"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2011-07-21T20:33:52.160086"
+    },
+    "latest_revision": 1,
+    "key": "/authors/OL6928543A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "ICON Reference",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T13:35:46.87638"
+    },
+    "key": "/authors/OL2727144A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Barbara Graziosi",
+    "personal_name": "Barbara Graziosi",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-09-01T07:16:58.753103"
+    },
+    "key": "/authors/OL1603496A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 2
+  },
+  {
+    "name": "Steven L. Peck",
+    "birth_date": "1957",
+    "type": {
+      "key": "/type/author"
+    },
+    "key": "/authors/OL1518033A",
+    "personal_name": "Steven L. Peck",
+    "remote_ids": {
+      "wikidata": "Q22073353"
+    },
+    "photos": [
+      15216573
+    ],
+    "latest_revision": 5,
+    "revision": 5,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-01T03:28:50.625462"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2026-04-30T00:47:43.459813"
+    }
+  },
+  {
+    "name": "John Gay",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T03:23:05.028350"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T03:23:05.028350"
+    },
+    "key": "/authors/OL6012763A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Francis William Newman",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T03:40:58.268643"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T03:40:58.268643"
+    },
+    "key": "/authors/OL6016197A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Walter Leaf",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T04:10:00.748807"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T04:10:00.748807"
+    },
+    "key": "/authors/OL6024126A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Bernard Knox",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T13:35:46.87638"
+    },
+    "key": "/authors/OL2658980A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Joe Sachs",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-11-06T07:56:36.770818"
+    },
+    "personal_name": "Joe Sachs",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-11-06T07:56:36.770818"
+    },
+    "key": "/authors/OL6388795A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Henry Smith Wright",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T14:32:16.724653"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T14:32:16.724653"
+    },
+    "key": "/authors/OL6077911A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "type": {
+      "key": "/type/author"
+    },
+    "name": "Marta Íngrid Rebón Rodríguez",
+    "key": "/authors/OL9950285A",
+    "source_records": [
+      "amazon:8416734941"
+    ],
+    "latest_revision": 1,
+    "revision": 1,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2021-11-06T01:48:16.863380"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2021-11-06T01:48:16.863380"
+    }
+  },
+  {
+    "name": "Frederick Davidson",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T15:03:11.581851"
+    },
+    "key": "/authors/OL2865621A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Cornelius Conway Felton",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T00:27:32.921670"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T00:27:32.921670"
+    },
+    "key": "/authors/OL5990769A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Francesco Cassi",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T08:27:31.789674"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T08:27:31.789674"
+    },
+    "key": "/authors/OL6062816A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "E. V. Rieu",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2020-06-06T10:57:18.885621"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2020-06-06T10:57:18.885621"
+    },
+    "latest_revision": 1,
+    "key": "/authors/OL7958889A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "John Flaxman",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T04:53:25.649653"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T04:53:25.649653"
+    },
+    "key": "/authors/OL6035887A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Odile Mortier-Waldschmidt",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-30T20:50:18.033121"
+    },
+    "key": "/authors/OL3930238A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Butler",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T13:35:46.87638"
+    },
+    "key": "/authors/OL2699407A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Caroline Alexander",
+    "personal_name": "Caroline Alexander",
+    "key": "/authors/OL2465165A",
+    "type": {
+      "key": "/type/author"
+    },
+    "bio": {
+      "type": "/type/text",
+      "value": "Undifferentiated"
+    },
+    "latest_revision": 3,
+    "revision": 3,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-01T03:28:50.625462"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2026-03-03T18:22:31.106469"
+    }
+  },
+  {
+    "type": {
+      "key": "/type/author"
+    },
+    "title": "ca. 8th-7th cent. B.C.",
+    "links": [
+      {
+        "title": "Biography & Works",
+        "url": "http://www.online-literature.com/homer/",
+        "type": {
+          "key": "/type/link"
+        }
+      },
+      {
+        "title": "Wikipedia (English)",
+        "url": "https://en.wikipedia.org/wiki/Homerhttps://",
+        "type": {
+          "key": "/type/link"
+        }
+      },
+      {
+        "title": "Britannica",
+        "url": "https://www.britannica.com/biography/Homer-Greek-poet",
+        "type": {
+          "key": "/type/link"
+        }
+      },
+      {
+        "title": "Wikipedia (English)",
+        "url": "https://en.wikipedia.org/wiki/Homer",
+        "type": {
+          "key": "/type/link"
+        }
+      }
+    ],
+    "bio": "Ο Όμηρος είναι ο δημιουργός των ποιητικών έργων της Ιλιάδας και της Οδύσσειας, από τα πρώτα κείμενα της Ιστορικής περιόδου της αρχαίας Ελλάδας, γνωστών ως «Ομηρικά Έπη». Η Ιλιάδα αποτελείται από 15.693 στίχους και αναφέρεται στις τελευταίες πενήντα μία, αποφασιστικής σημασίας ημέρες του πολέμου της Τροίας, ο οποίος συνολικά διήρκεσε, σύμφωνα με τον μύθο, 10 χρόνια. Η Οδύσσεια αποτελείται από 12.110 στίχους και περιγράφει τον δεκαετή αγώνα του Οδυσσέα για τον νόστο (επιστροφή στην πατρίδα του Ιθάκη μετά την κατάληψη της Τροίας).\r\n\r\nΗ γλώσσα των κειμένων είναι η ομηρική ελληνική, μια λογοτεχνική γλώσσα με ανάμειξη χαρακτηριστικών από την ιωνική και την αιολική διάλεκτο με κύρια επιρροή την ανατολική ιωνική διάλεκτο. Πολλοί ερευνητές πιστεύουν ότι αρχικά τα ποιήματα μεταδόθηκαν προφορικά.\r\n\r\n\r\n----------\r\n\r\n\r\nHomer (Ancient Greek: Ὅμηρος) was an ancient Greek author and epic poet. He is the reputed author of the Iliad and the Odyssey, the two epic poems that are the foundational works of ancient Greek literature. He is regarded as one of the greatest and most influential authors of all time. The Homeric epics were the greatest influence on ancient Greek culture and education. From antiquity until the present day, the influence of Homeric epic on Western civilization has been great, inspiring many of its most famous works of literature, music, art and film.\r\n\r\nThe poems are in Homeric Greek, also known as Epic Greek, a literary language which shows a mixture of features of the Ionic and Aeolic dialects from different centuries; the predominant influence is Eastern Ionic. Most researchers believe that the poems were originally transmitted orally.\r\n\r\nThe ancient Greeks generally believed that Homer was an historical individual, but modern scholars are skeptical: no reliable biographical information has been handed down from classical antiquity, and the poems themselves manifestly represent the culmination of many centuries of oral story-telling and a well-developed \"formulaic\" system of poetic composition. According to Martin West, \"Homer\" is \"not the name of a historical poet, but a fictitious or constructed name.\"",
+    "personal_name": "Homer.",
+    "alternate_names": [
+      "Homère",
+      "Homer",
+      "Hómēros",
+      "Omero",
+      "Homero",
+      "Гомер",
+      "荷马",
+      "هوميروس",
+      "Homer Homer",
+      "Homer Staff",
+      "Homerus",
+      "Homerus ca. 8th-7th cent. B.C.",
+      "Homeros",
+      "Homère.",
+      "Homere/",
+      "HOMER"
+    ],
+    "name": "Ὅμηρος",
+    "photos": [
+      6347947,
+      3366949,
+      6868139
+    ],
+    "key": "/authors/OL18404A",
+    "source_records": [
+      "amazon:0342701975",
+      "bwb:9798507290277",
+      "bwb:9798749626797"
+    ],
+    "remote_ids": {
+      "isni": "000000036354151X",
+      "viaf": "224924963",
+      "project_gutenberg": "705",
+      "wikidata": "Q6691"
+    },
+    "latest_revision": 27,
+    "revision": 27,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-01T03:28:50.625462"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2026-09-11T02:25:57.814050"
+    }
+  },
+  {
+    "name": "Bruno Rémy",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-30T20:50:18.033121"
+    },
+    "key": "/authors/OL3911969A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "source_records": [
+      "promise:bwb_daily_pallets_2021-08-19"
+    ],
+    "type": {
+      "key": "/type/author"
+    },
+    "name": "Derek Jacobi",
+    "key": "/authors/OL2728853A",
+    "alternate_names": [
+      "Sir Derek Jacobi"
+    ],
+    "latest_revision": 2,
+    "revision": 2,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T13:35:46.876380"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2024-04-01T08:21:12.009236"
+    }
+  },
+  {
+    "type": {
+      "key": "/type/author"
+    },
+    "name": "Tissut Anne-Laure Everett Percival",
+    "key": "/authors/OL13590602A",
+    "source_records": [
+      "promise:bwb_daily_pallets_2024-01-31:P9-BXB-308"
+    ],
+    "latest_revision": 1,
+    "revision": 1,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2024-02-02T01:19:22.375631"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2024-02-02T01:19:22.375631"
+    }
+  },
+  {
+    "name": "Percival L. Everett",
+    "bio": {
+      "type": "/type/text",
+      "value": "American writer and Distinguished Professor of English at the University of Southern California."
+    },
+    "personal_name": "Percival L. Everett",
+    "source_records": [
+      "bwb:9781555970550",
+      "bwb:9780593686867",
+      "bwb:9781941088968",
+      "bwb:9781035031269"
+    ],
+    "type": {
+      "key": "/type/author"
+    },
+    "alternate_names": [
+      "Percival Everett",
+      "Percíval Everett",
+      "Percival L Everett"
+    ],
+    "birth_date": "1956",
+    "remote_ids": {
+      "wikidata": "Q3375158",
+      "viaf": "120212810",
+      "goodreads": "31723",
+      "isni": "0000000115807163",
+      "imdb": "nm0263562",
+      "lc_naf": "n83043473",
+      "librarything": "everettpercival",
+      "storygraph": "f7f00ba7-2c41-4577-99c1-57801d2fc39f"
+    },
+    "photos": [
+      14854830
+    ],
+    "key": "/authors/OL34745A",
+    "latest_revision": 11,
+    "revision": 11,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-01T03:28:50.625462"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2025-10-30T20:23:04.427063"
+    }
+  },
+  {
+    "key": "/authors/OL2658787A",
+    "source_records": [
+      "promise:bwb_daily_pallets_2022-05-23",
+      "bwb:9781490305196",
+      "ia:erewhonoroverthe030672mbp"
+    ],
+    "type": {
+      "key": "/type/author"
+    },
+    "name": "Samuel Butler",
+    "photos": [
+      12066851
+    ],
+    "latest_revision": 5,
+    "revision": 5,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T13:35:46.876380"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2025-12-21T15:37:49.431981"
+    }
+  },
+  {
+    "name": "Robert Fagles",
+    "personal_name": "Robert Fagles",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-08-28T11:13:47.192818"
+    },
+    "key": "/authors/OL1809001A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 2
+  },
+  {
+    "name": "Mary Ann Dwight",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T01:14:23.959196"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T01:14:23.959196"
+    },
+    "key": "/authors/OL5995807A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Jim Nisbet",
+    "personal_name": "Jim Nisbet",
+    "key": "/authors/OL384318A",
+    "type": {
+      "key": "/type/author"
+    },
+    "birth_date": "1947",
+    "death_date": "2022",
+    "alternate_names": [
+      "James Nisbet"
+    ],
+    "remote_ids": {
+      "viaf": "23494041"
+    },
+    "latest_revision": 3,
+    "revision": 3,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-01T03:28:50.625462"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2024-03-10T15:30:52.499438"
+    }
+  },
+  {
+    "name": "Juan David Garcia Bacca",
+    "personal_name": "Juan David Garcia Bacca",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-08-24T08:03:44.07713"
+    },
+    "key": "/authors/OL1942590A",
+    "birth_date": "1901",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 2
+  },
+  {
+    "name": "Stephen Mitchell",
+    "personal_name": "Stephen Mitchell",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-01T03:28:50.625462"
+    },
+    "alternate_names": [
+      "STEPHEN MITCHELL"
+    ],
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2012-08-04T17:23:48.241262"
+    },
+    "latest_revision": 3,
+    "key": "/authors/OL835792A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 3
+  },
+  {
+    "name": "Gerald Maclean Edwards",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T07:07:05.986819"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T07:07:05.986819"
+    },
+    "key": "/authors/OL6051338A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "James M. McPherson",
+    "bio": {
+      "type": "/type/text",
+      "value": "James M. McPherson (born October 11, 1936) is an American historian specializing in the Civil War; winner of the Pulitzer Prize for History in 1989 for *Battle Cry of Freedom*."
+    },
+    "remote_ids": {
+      "viaf": "27079108",
+      "wikidata": "Q709723",
+      "isni": "0000000118741841",
+      "goodreads": "12144",
+      "imdb": "nm2098163",
+      "lc_naf": "n50007860"
+    },
+    "birth_date": "11 Oct 1936",
+    "type": {
+      "key": "/type/author"
+    },
+    "photos": [
+      14621521
+    ],
+    "alternate_names": [
+      "James Mcpherson",
+      "James M. McPherson (1936 - )"
+    ],
+    "personal_name": "James M. McPherson",
+    "source_records": [
+      "amazon:0078652774",
+      "amazon:0367004739",
+      "promise:bwb_daily_pallets_2022-09-06",
+      "promise:bwb_daily_pallets_2022-03-17",
+      "promise:bwb_daily_pallets_2021-03-30",
+      "promise:bwb_daily_pallets_2021-01-28",
+      "amazon:0076755681",
+      "promise:bwb_daily_pallets_2023-05-16:T1-AEB-196",
+      "promise:bwb_daily_pallets_2023-11-10:O9-BHO-817",
+      "promise:bwb_daily_pallets_2024-02-13:P9-COH-729",
+      "marc:marc_columbia/Columbia-extract-20221130-003.mrc:211933669:928",
+      "ia:abolitionistlega0000jame"
+    ],
+    "key": "/authors/OL19496A",
+    "latest_revision": 13,
+    "revision": 13,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-01T03:28:50.625462"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2025-07-31T19:18:09.173003"
+    }
+  },
+  {
+    "name": "Hui-ch'ing Yen",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T03:43:35.938881"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T03:43:35.938881"
+    },
+    "key": "/authors/OL6016717A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Joseph Henry Dart",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T08:27:36.088297"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T08:27:36.088297"
+    },
+    "key": "/authors/OL6062822A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "links": [
+      {
+        "title": "ConnieWillis.net",
+        "url": "http://www.sftv.org/cw/",
+        "type": {
+          "key": "/type/link"
+        }
+      },
+      {
+        "title": "The Connie Willis . Net Blog",
+        "url": "http://azsf.net/cwblog/",
+        "type": {
+          "key": "/type/link"
+        }
+      },
+      {
+        "title": "Wikipedia",
+        "url": "https://en.wikipedia.org/wiki/Connie_Willis",
+        "type": {
+          "key": "/type/link"
+        }
+      }
+    ],
+    "key": "/authors/OL20934A",
+    "photos": [
+      7423166,
+      7423005
+    ],
+    "name": "Connie Willis",
+    "personal_name": "Connie Willis",
+    "birth_date": "1945-12-31",
+    "type": {
+      "key": "/type/author"
+    },
+    "remote_ids": {
+      "wikidata": "Q234700",
+      "viaf": "19700106",
+      "isni": "0000000114686021",
+      "bookbrainz": "dc8b4ce3-0313-4ea9-be5e-ca3a0942edc6",
+      "musicbrainz": "866c4546-3527-4360-86bc-11bdb7c2c216",
+      "goodreads": "14032",
+      "lc_naf": "n84198009",
+      "librarything": "willisconnie",
+      "imdb": "nm2081547",
+      "gnd": "110386590"
+    },
+    "source_records": [
+      "bwb:9780345540683",
+      "bwb:9780593499870"
+    ],
+    "bio": {
+      "type": "/type/text",
+      "value": "**Connie Willis** is an internationally known science fiction author and the winner of an unprecedented total of seven Nebula awards and eleven Hugo awards. She is also the first author to have won both the Hugo and Nebula in all four fiction categories. In 2009, she was inducted into the Science Fiction Hall of Fame, and in 2012 she became a Nebula Grand Master of Science Fiction.\r\n\r\nWillis is the author of *Doomsday Book*, winner of the Nebula and Hugo awards for Best Science Fiction Novel; *Lincoln’s Dreams*, winner of the John W. Campbell Award for Best Science Fiction Novel; and *To Say Nothing of the Dog*, winner of the Hugo Award for Best Science Fiction Novel. Her other fiction includes the novels *Remake*, *Uncharted Territory*, *Bellwether*, and *Passage*, as well as the short story collections *Fire Watch*, *Impossible Things*, *Miracle and Other Christmas Stories*, and *The Winds of Marble Arch*. Her most popular short stories include “Fire Watch,” “Even the Queen,” and “The Last of The Winnebagos.”\r\n\r\nWillis’s most recent work is the Nebula and Hugo Award–winning two-volume work entitled *Blackout* and *All Clear*, a time-travel saga set in World War II in the middle of the evacuation of Dunkirk, the intelligence war, and the London Blitz.\r\n\r\nShe is currently working on a new novel about iPhones, Facebook, tweeting, and telepathy. It is, of course, a comedy. Visit [www.sftv.org/cw](http://www.sftv.org/cw) for more information. — Alien Sex"
+    },
+    "latest_revision": 16,
+    "revision": 16,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-01T03:28:50.625462"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2026-06-28T11:58:38.624743"
+    }
+  },
+  {
+    "name": "Steven Crossley",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-30T09:38:13.731961"
+    },
+    "key": "/authors/OL3129600A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Denison Hull",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-30T09:38:13.731961"
+    },
+    "key": "/authors/OL3625895A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Ernest Myers",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T14:13:14.979403"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T14:13:14.979403"
+    },
+    "key": "/authors/OL6075181A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Simon Pulleyn",
+    "personal_name": "Simon Pulleyn",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-09-02T13:22:42.383192"
+    },
+    "key": "/authors/OL390588A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 2
+  },
+  {
+    "name": "Alan Sklar",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T15:03:11.581851"
+    },
+    "key": "/authors/OL2865708A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Arthur Gardner Lewis",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T14:21:37.221170"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T14:21:37.221170"
+    },
+    "key": "/authors/OL6076391A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Simon Schama",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2020-05-16T23:50:00.799267"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2020-05-16T23:50:00.799267"
+    },
+    "latest_revision": 1,
+    "key": "/authors/OL7895442A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "type": {
+      "key": "/type/author"
+    },
+    "name": "Marta Ingrid Rebón Rodríguez",
+    "key": "/authors/OL12552658A",
+    "source_records": [
+      "amazon:8499303986"
+    ],
+    "latest_revision": 1,
+    "revision": 1,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2023-03-16T19:58:56.937856"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2023-03-16T19:58:56.937856"
+    }
+  },
+  {
+    "name": "A. Zee",
+    "type": {
+      "key": "/type/author"
+    },
+    "personal_name": "A. Zee",
+    "remote_ids": {
+      "viaf": "73931626",
+      "wikidata": "Q574181",
+      "isni": "0000000109156376",
+      "lc_naf": "n83311131"
+    },
+    "alternate_names": [
+      "A Zee"
+    ],
+    "key": "/authors/OL30358A",
+    "latest_revision": 5,
+    "revision": 5,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-01T03:28:50.625462"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2025-07-31T21:40:02.900196"
+    }
+  },
+  {
+    "name": "Simon Schama",
+    "bio": {
+      "type": "/type/text",
+      "value": "British historian"
+    },
+    "links": [
+      {
+        "url": "https://en.wikipedia.org/wiki/Simon_Schama",
+        "type": {
+          "key": "/type/link"
+        },
+        "title": "Wikipedia"
+      },
+      {
+        "url": "https://www.wikidata.org/wiki/Q472272",
+        "type": {
+          "key": "/type/link"
+        },
+        "title": "Wikidata"
+      },
+      {
+        "url": "https://viaf.org/viaf/46784579",
+        "type": {
+          "key": "/type/link"
+        },
+        "title": "VIAF ID: 46784579"
+      },
+      {
+        "url": "https://twitter.com/simon_schama",
+        "type": {
+          "key": "/type/link"
+        },
+        "title": "Twitter: @simon_schama"
+      },
+      {
+        "url": "http://",
+        "title": "Website",
+        "type": {
+          "key": "/type/link"
+        }
+      }
+    ],
+    "personal_name": "Simon Schama",
+    "alternate_names": [
+      "Simon. Schama",
+      "Schama Simon",
+      "Schama",
+      "S. Schama",
+      "schama-simon"
+    ],
+    "photos": [
+      8362412
+    ],
+    "birth_date": "13 February 1945",
+    "type": {
+      "key": "/type/author"
+    },
+    "remote_ids": {
+      "viaf": "46784579",
+      "wikidata": "Q472272",
+      "isni": "000000010895670X",
+      "goodreads": "695",
+      "imdb": "nm0769988",
+      "lc_naf": "n50020394",
+      "opac_sbn": "CFIV076476",
+      "amazon": "B000AQ8WPO"
+    },
+    "key": "/authors/OL6893313A",
+    "latest_revision": 11,
+    "revision": 11,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2011-04-07T00:27:32.923001"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2025-08-01T01:18:12.118767"
+    }
+  },
+  {
+    "name": "Louis Markos",
+    "personal_name": "Louis Markos",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-09-07T16:39:41.87264"
+    },
+    "key": "/authors/OL1399732A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 2
+  },
+  {
+    "name": "Samuel (translator) Butler",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-30T08:14:56.482104"
+    },
+    "key": "/authors/OL3108782A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Homer;  Translator  Michael Reck",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T13:35:46.87638"
+    },
+    "key": "/authors/OL2632710A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Richmond Lattimore",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T13:35:46.87638"
+    },
+    "key": "/authors/OL2630986A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Michel Woronoff",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-30T09:38:13.731961"
+    },
+    "key": "/authors/OL3263182A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Allen Rogers Benner",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T04:57:31.252779"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T04:57:31.252779"
+    },
+    "key": "/authors/OL6036652A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Rik McGuire",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-30T09:38:13.731961"
+    },
+    "key": "/authors/OL3590835A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Cornelis Schrevel",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T03:18:44.492035"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T03:18:44.492035"
+    },
+    "key": "/authors/OL6012045A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Gottlieb Christian Crusius",
+    "personal_name": "Gottlieb Christian Crusius",
+    "death_date": "1848",
+    "alternate_names": [
+      "G. Ch Crusius"
+    ],
+    "birth_date": "1785",
+    "type": {
+      "key": "/type/author"
+    },
+    "remote_ids": {
+      "viaf": "35216285",
+      "wikidata": "Q1326708",
+      "isni": "0000000081145535",
+      "lc_naf": "nr97012972"
+    },
+    "key": "/authors/OL6204963A",
+    "latest_revision": 4,
+    "revision": 4,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-31T22:33:53.985278"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2025-08-01T00:31:41.285454"
+    }
+  },
+  {
+    "name": "Adam Nicholson",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-04-29T15:03:11.581851"
+    },
+    "key": "/authors/OL2754722A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "name": "Marion Giebel",
+    "personal_name": "Marion Giebel",
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-09-06T18:54:11.568284"
+    },
+    "key": "/authors/OL185524A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 2
+  },
+  {
+    "birth_date": "11 July 1930",
+    "remote_ids": {
+      "viaf": "191378696",
+      "wikidata": "Q345612",
+      "isni": "0000000385505720",
+      "bookbrainz": "ac210bfa-7f53-48f5-8930-05972d900bea",
+      "goodreads": "236",
+      "lc_naf": "n79003258",
+      "librarything": "bloomharold",
+      "opac_sbn": "CFIV006896",
+      "gnd": "119176602"
+    },
+    "source_records": [
+      "amazon:9870421156",
+      "bwb:9780791099032",
+      "bwb:9781306864039",
+      "promise:bwb_daily_pallets_2020-11-24",
+      "promise:bwb_daily_pallets_2023-08-18:W7-BOO-227",
+      "promise:bwb_daily_pallets_2023-12-11:P9-BHH-308",
+      "promise:bwb_daily_pallets_2022-03-17",
+      "amazon:8130904608",
+      "promise:bwb_daily_pallets_2020-12-09",
+      "promise:bwb_daily_pallets_2023-01-02",
+      "ia:blakesapocalypse0000haro",
+      "ia:bwb_P9-DYS-206",
+      "ia:comprehensiveres0000haro_e7v7_a7d6"
+    ],
+    "photos": [
+      7435571
+    ],
+    "death_date": "14 October 2019",
+    "bio": {
+      "type": "/type/text",
+      "value": "**Harold Bloom** is an American literary critic and Sterling Professor of Humanities at Yale University. Since the publication of his first book in 1959, Bloom has written more than 20 books of literary criticism, several books discussing religion, and a novel. He has edited hundreds of anthologies concerning numerous literary and philosophical figures for the Chelsea House publishing firm. Bloom's books have been translated into more than 40 languages. - Wikipedia"
+    },
+    "type": {
+      "key": "/type/author"
+    },
+    "personal_name": "Bloom, Harold.",
+    "name": "Harold Bloom",
+    "key": "/authors/OL29809A",
+    "latest_revision": 13,
+    "revision": 13,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-04-01T03:28:50.625462"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2026-07-26T14:56:54.197120"
+    }
+  },
+  {
+    "name": "Kathy Heaser",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2020-08-20T17:34:20.491841"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2020-08-20T17:34:20.491841"
+    },
+    "latest_revision": 1,
+    "key": "/authors/OL8201568A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  },
+  {
+    "type": {
+      "key": "/type/author"
+    },
+    "name": "Anibal Leal Fernández;",
+    "key": "/authors/OL9940995A",
+    "source_records": [
+      "amazon:8499929966"
+    ],
+    "latest_revision": 1,
+    "revision": 1,
+    "created": {
+      "type": "/type/datetime",
+      "value": "2021-11-05T17:44:39.516064"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2021-11-05T17:44:39.516064"
+    }
+  },
+  {
+    "name": "Johann Heinrich Voss",
+    "created": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T00:57:27.276211"
+    },
+    "last_modified": {
+      "type": "/type/datetime",
+      "value": "2008-10-27T00:57:27.276211"
+    },
+    "key": "/authors/OL5993835A",
+    "type": {
+      "key": "/type/author"
+    },
+    "revision": 1
+  }
+]

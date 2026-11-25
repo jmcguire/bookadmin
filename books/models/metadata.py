@@ -4,14 +4,14 @@ from django.db import models
 
 
 class EditionISBN(models.Model):
-    edition = models.ForeignKey("books.Edition", on_delete=models.PROTECT)
+    edition = models.ForeignKey("books.CatalogEdition", on_delete=models.PROTECT)
     isbn13 = models.CharField(max_length=13)
 
 
 class Cover(models.Model):
     cover = models.BigAutoField(primary_key=True)
     cover_filename = models.CharField(max_length=200)  # ImageField?
-    edition_id = models.ForeignKey("books.Edition", on_delete=models.PROTECT)
+    edition_id = models.ForeignKey("books.CatalogEdition", on_delete=models.PROTECT)
 
 
 # replace with a Field.choices

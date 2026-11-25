@@ -1,10 +1,12 @@
 from django.urls import path
 
 from . import views
-from .services.fileimport.api import imports_api
+from .services.importing.api import import_api
+from .services.processing.api import process_api
 
 app_name = "books"
 urlpatterns = [
     path("", views.IndexView.as_view(), name="index"),
-    path("api/imports/", imports_api.urls),
+    path("api/imports/", import_api.urls),
+    path("api/process/", process_api.urls),
 ]

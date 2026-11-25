@@ -1,4 +1,4 @@
-from .catalog import Author, Edition, Work
+from .catalog import CatalogAuthor, CatalogEdition, CatalogWork
 from .decisions import (
     DecisionAuthor,
     DecisionEdition,
@@ -6,9 +6,9 @@ from .decisions import (
     DecisionWork,
 )
 from .identity import (
-    IdentityMappingProvenanceAuthorToOurAuthor,
-    IdentityMappingProvenanceEditionToOurEdition,
-    IdentityMappingProvenanceWorkToOurWork,
+    IdentityMappingProcessedAuthorToOurAuthor,
+    IdentityMappingProcessedEditionToOurEdition,
+    IdentityMappingProcessedWorkToOurWork,
 )
 from .metadata import (
     # AuthorXMovement,
@@ -21,37 +21,45 @@ from .metadata import (
     Publisher,
     # WorkXGenre,
 )
+from .processed import (
+    ProcessedAuthor,
+    ProcessedEdition,
+    ProcessedEditionToWorkMapping,
+    ProcessedWork,
+)
 from .provenance import (
     ProvenanceAuthor,
     ProvenanceEdition,
-    ProvenanceEditionToWorkMapping,
     ProvenanceImport,
     ProvenanceWork,
 )
 
 __all__ = [
-    "Author",
+    "CatalogAuthor",
+    "CatalogEdition",
+    "CatalogWork",
     # "AuthorXMovement",
     "Cover",
     "DecisionAuthor",
     "DecisionEdition",
     "DecisionEditionToWork",
     "DecisionWork",
-    "Edition",
     "EditionISBN",
     # "Genre",
-    "IdentityMappingProvenanceAuthorToOurAuthor",
-    "IdentityMappingProvenanceEditionToOurEdition",
-    "IdentityMappingProvenanceWorkToOurWork",
+    "IdentityMappingProcessedAuthorToOurAuthor",
+    "IdentityMappingProcessedEditionToOurEdition",
+    "IdentityMappingProcessedWorkToOurWork",
     "Language",
     # "Movement",
     "Nationality",
+    # "WorkXGenre",
+    "ProcessedAuthor",
+    "ProcessedEdition",
+    "ProcessedEditionToWorkMapping",
+    "ProcessedWork",
     "ProvenanceAuthor",
     "ProvenanceEdition",
-    "ProvenanceEditionToWorkMapping",
     "ProvenanceImport",
     "ProvenanceWork",
     "Publisher",
-    "Work",
-    # "WorkXGenre",
 ]

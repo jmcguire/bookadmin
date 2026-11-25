@@ -1,9 +1,9 @@
 from django.contrib import admin
 
-from books.models import Author
+from books.models import CatalogAuthor
 
 
-@admin.register(Author)
+@admin.register(CatalogAuthor)
 class AuthorAdmin(admin.ModelAdmin):
     search_fields = ["given_name", "family_name"]
     readonly_fields = [

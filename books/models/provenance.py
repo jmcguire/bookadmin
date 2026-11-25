@@ -1,13 +1,13 @@
 from django.db import models
 
 # incoming data from various services
-# this is flat data with no translation or understanding from our side
+# this is flat data import with no translation or understanding from our side
+# (that part happens in the convert models)
 
 
 class ProvenanceFieldsMixin(models.Model):
     external_id = models.CharField(max_length=200)
     revision = models.CharField(max_length=200)
-    data = models.JSONField(null=True, blank=True)
     unprocessed_data = models.JSONField(null=True, blank=True)
 
     class Meta:
@@ -48,22 +48,6 @@ class ProvenanceWork(ProvenanceFieldsMixin):
         ]
 
 
-class ProvenanceEditionToWorkMapping(models.Model):
-    provenance_edition_external_id = models.CharField(max_length=100)
-    provenance_work_external_id = models.CharField(max_length=100)
-
-    provenance_edition = models.ForeignKey(
-        "ProvenanceEdition", on_delete=models.PROTECT, null=True, blank=True
-    )
-    provenance_work = models.ForeignKey(
-        "ProvenanceWork", on_delete=models.PROTECT, null=True, blank=True
-    )
-
-    provenance_import = models.ForeignKey(
-        "ProvenanceImport", on_delete=models.PROTECT, related_name="mappings"
-    )
-
-
 class ProvenanceAuthor(ProvenanceFieldsMixin):
     provenance_import = models.ForeignKey(
         "ProvenanceImport", on_delete=models.PROTECT, related_name="authors"
@@ -84,13 +68,9 @@ class ProvenanceAuthor(ProvenanceFieldsMixin):
 # often a bunch of import records come from a single batch
 class ProvenanceImport(models.Model):
     provider = models.CharField(max_length=200)
-    uri = models.CharField(
-        max_length=200, null=True
-    )  # some globally unique identifier?
+    uri = models.CharField(max_length=200, null=True)  # some globally unique identifier?
     imported_on = models.DateTimeField(auto_now_add=True)
-    filename = models.CharField(
-        max_length=200
-    )  # replace with FileField or FilePathField?
+    filename = models.CharField(max_length=200)  # replace with FileField or FilePathField?
     results = models.JSONField(null=True, blank=True)
 
     def __str__(self):
@@ -102,5 +82,4 @@ class ProvenanceImport(models.Model):
             "editions": self.editions.count(),
             "works": self.works.count(),
             "authors": self.authors.count(),
-            "mappings": self.mappings.count(),
         }

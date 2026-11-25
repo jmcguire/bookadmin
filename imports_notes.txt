@@ -182,3 +182,32 @@ a lot of this matching can be automated, but it's still going to be a lot of reg
       "Knox, Bernard MacGregor Walker."
     ],
     "by_statement": "Homer ; translated by Robert Fagles ; introduction and notes by Bernard Knox.",
+
+adridgements are not clearly marked
+
+    "subtitle": "English.  1950.  The wrath of Achilles; the Iliad of Homer, shortened and in a new translation by I.A. Richards.",
+    "subtitle": "The Iliad of Homer, shortened and in a new translation",
+
+translations are sometimes marked in the by_statement
+
+    "Vasili Grossman ; traducción de Marta Rebón"
+    "Vasily Grossman ; translated by Robert Chandler."
+    "Vasily Grossman ; translated from the Russian by Robert Chandler."
+    "translated into blank verse by Ichabod Charles Wright."
+    "Tr;anslated by Alexander Pope."
+    "tr. by Alexander Pope ... Ed. by Warwick James Price ..."
+    "Tr. by Alexander Pope ..."
+    "literally translated, with explanatory notes. By Theodore Alois Buckley ..."
+    "Homometrically tr. by C.B. Cayley"
+    "homometrically translated by C.B. Cayley."
+    "Homer ; translated by Robert Fagles ; introduction and notes by Bernard Knox"
+ 
+ contributions will sometimes include the former owner of distinct books
+
+/books/OL7079371M
+    "contributions": [
+      "Adams, John Quincy, 1767-1848, former owner.",
+      "Pope, Alexander, 1688-1744, tr.",
+      "Adams, John, 1735-1826, former owner.",
+      "John Adams Library (Boston Public Library)"
+    ],

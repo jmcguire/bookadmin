@@ -6,23 +6,24 @@ from ninja.errors import HttpError
 from ...models import ProvenanceImport
 from .file_importer import FileImporter
 from .file_importer_open_library import FileImporterOpenLibrary
+from .results import FileImportResults, FileList, ImportsList, ProvenanceImportOut
 
-imports_api = NinjaAPI()
+import_api = NinjaAPI()
 
 
-@imports_api.get("")
+@import_api.get("", response=ImportsList)
 def get_imports(request):
     imports = get_list_or_404(ProvenanceImport)
-    return {"imports": imports}
+    return ImportsList(imports=imports)
 
 
-@imports_api.get("import/{import_id}")
+@import_api.get("import/{import_id}", response=ProvenanceImportOut)
 def get_import(request, import_id):
     imp = get_object_or_404(ProvenanceImport, import_id)
-    return {"import": imp, "stats": imp.stats()}
+    return imp
 
 
-@imports_api.get("files")
+@import_api.get("files", response=FileList)
 def get_files(request):
     downloads = settings.DOWNLOAD_DIR
 
@@ -37,10 +38,10 @@ def get_files(request):
     if not files:
         raise HttpError(404, "no files found")
 
-    return {"files": files}
+    return FileList(files=files)
 
 
-@imports_api.post("files/{filename}/import")
+@import_api.post("files/{filename}/import", response=FileImportResults)
 def import_file(request, filename):
     fileimporter: FileImporter = FileImporterOpenLibrary(filename)
 
@@ -53,8 +54,8 @@ def import_file(request, filename):
     if not fileimporter.load_file():
         raise HttpError(400, "import failed")
 
-    return {
-        "import_id": fileimporter.imp.id,
-        "file_stats": fileimporter.file_stats().__dict__,
-        "import_stats": fileimporter.imp.stats(),
-    }
+    return FileImportResults(
+        import_id=fileimporter.imp.id,
+        file_stats=fileimporter.file_stats(),
+        import_stats=fileimporter.imp.stats(),
+    )

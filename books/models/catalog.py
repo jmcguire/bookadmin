@@ -6,21 +6,21 @@ from .abstract_models import TimeStampedFieldsMixin
 
 
 # a single published volume
-class Edition(TimeStampedFieldsMixin):
+class CatalogEdition(TimeStampedFieldsMixin):
     title = models.CharField(max_length=200)
     description = models.CharField(max_length=200)
     default_cover = models.ForeignKey(
         "books.Cover", on_delete=models.PROTECT, null=True, blank=True
     )
     translator = models.ForeignKey(
-        "books.Author",
+        "books.CatalogAuthor",
         on_delete=models.PROTECT,
         null=True,
         blank=True,
         related_name="translations",
     )
     introduction_by = models.ForeignKey(
-        "books.Author",
+        "books.CatalogAuthor",
         on_delete=models.PROTECT,
         null=True,
         blank=True,
@@ -31,28 +31,24 @@ class Edition(TimeStampedFieldsMixin):
         "books.Publisher", on_delete=models.PROTECT, null=True, blank=True
     )
     pages = models.PositiveSmallIntegerField(null=True, blank=True)
-    work = models.ForeignKey("books.Work", on_delete=models.PROTECT)
-    language = models.ForeignKey(
-        "books.Language", on_delete=models.PROTECT, null=True, blank=True
-    )
+    work = models.ForeignKey("books.CatalogWork", on_delete=models.PROTECT)
+    language = models.ForeignKey("books.Language", on_delete=models.PROTECT, null=True, blank=True)
 
 
 # a piece of intellectual property
-class Work(TimeStampedFieldsMixin):
+class CatalogWork(TimeStampedFieldsMixin):
     title = models.CharField(max_length=200)
-    author = models.ForeignKey("books.Author", on_delete=models.PROTECT)
+    author = models.ForeignKey("books.CatalogAuthor", on_delete=models.PROTECT)
     description = models.CharField(max_length=200)
     year_first_published = models.SmallIntegerField(null=True, blank=True)
-    language = models.ForeignKey(
-        "books.Language", on_delete=models.PROTECT, null=True, blank=True
-    )
+    language = models.ForeignKey("books.Language", on_delete=models.PROTECT, null=True, blank=True)
     default_cover = models.ForeignKey(
         "books.Cover", on_delete=models.PROTECT, null=True, blank=True
     )
     # todo what about anthologies with multiple authors and an editor?
 
 
-class Author(TimeStampedFieldsMixin):
+class CatalogAuthor(TimeStampedFieldsMixin):
     given_name = models.CharField(max_length=200)
     family_name = models.CharField(max_length=200)
     sort_name = models.CharField(max_length=200)
@@ -60,9 +56,7 @@ class Author(TimeStampedFieldsMixin):
     nationality = models.ForeignKey(
         "books.Nationality", on_delete=models.PROTECT, null=True, blank=True
     )
-    language = models.ForeignKey(
-        "books.Language", on_delete=models.PROTECT, null=True, blank=True
-    )
+    language = models.ForeignKey("books.Language", on_delete=models.PROTECT, null=True, blank=True)
     birth = models.DateField(null=True, blank=True)
     death = models.DateField(null=True, blank=True)
     bio_short = models.CharField(
