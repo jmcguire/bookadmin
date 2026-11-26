@@ -13,7 +13,7 @@ from books.models import (
 
 @admin.register(ProcessedAuthor)
 class ProcessedAuthorAdmin(admin.ModelAdmin):
-    readonly_fields = ["provenance_author"]
+    readonly_fields = ["provenance_author", "record_title", "pretty_data"]
     exclude = ["data"]
 
     @admin.display(description="Processed Data")
@@ -26,7 +26,7 @@ class ProcessedAuthorAdmin(admin.ModelAdmin):
 
 @admin.register(ProcessedEdition)
 class ProcessedEditionAdmin(admin.ModelAdmin):
-    readonly_fields = ["provenance_edition"]
+    readonly_fields = ["provenance_edition", "record_title", "pretty_data"]
     exclude = ["data"]
 
     @admin.display(description="Processed Data")
@@ -39,7 +39,7 @@ class ProcessedEditionAdmin(admin.ModelAdmin):
 
 @admin.register(ProcessedWork)
 class ProcessedWorkAdmin(admin.ModelAdmin):
-    readonly_fields = ["provenance_work"]
+    readonly_fields = ["provenance_work", "record_title", "pretty_data"]
     exclude = ["data"]
 
     @admin.display(description="Processed Data")

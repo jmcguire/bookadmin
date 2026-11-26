@@ -11,6 +11,12 @@ class ProvenanceQuerySet(models.QuerySet):
     def unprocessed_external_ids(self) -> list[str]:
         return list(self.filter(processed__isnull=True).values_list("external_id", flat=True))
 
+    def ids_by_import(self, import_id: int) -> list[str]:
+        return list(self.filter(provenance_import_id=import_id).values_list("id", flat=True))
+
+    def ids(self) -> list[str]:
+        return list(self.values_list("id", flat=True))
+
 
 class ProvenanceFieldsMixin(models.Model):
     external_id = models.CharField(max_length=200)

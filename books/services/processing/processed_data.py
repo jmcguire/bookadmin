@@ -1,47 +1,45 @@
-class ProcessedWorkData:
-    def __init__(self):
-        self.external_id = ""
-        self.revision = ""
-
-        self.title = ""
-        self.author_id = ""
-        self.description = ""
-        self.year_first_published = ""
-        self.language = ""
+from ninja import Schema
 
 
-class ProcessedAuthorData:
-    def __init__(self):
-        self.external_id = ""
-        self.revision = ""
+class ProcessedWorkData(Schema):
+    external_id: str = ""
+    revision: int = ""
 
-        self.bio = ""
-        self.name = ""
-        self.given_name = ""
-        self.family_name = ""
-        self.bio = ""
-        self.birthday = ""
-        self.deathday = ""
-        self.names = []
-        self.nationality = []
-        self.language = []
-        self.identifiers = {}
+    title: str = ""
+    author_id: str = ""
+    description: str = ""
+    year_first_published: int = ""
+    language: str = ""
 
 
-class ProcessedEditionData:
-    def __init__(self):
-        self.external_id = ""
-        self.revision = ""
+class ProcessedAuthorData(Schema):
+    external_id: str = ""
+    revision: int = ""
 
-        self.title = ""
-        self.description = ""
-        self.translator = ""
-        self.introduction_by = ""
-        self.year_published = ""
-        self.publisher = ""
-        self.pages: int = 0
-        self.work = ""
-        self.language = ""
-        self.identifiers = []
-        self.subtitle = ""
-        self.publisher = ""
+    name: str = ""
+    given_name: str = ""
+    family_name: str = ""
+    bio: str = ""
+    birthday: str = ""
+    deathday: str = ""
+    names: list[str] = []
+    nationality: list[str] = []
+    language: list[str] = []
+    identifiers: dict = {}
+
+
+class ProcessedEditionData(Schema):
+    external_id: str = ""
+    revision: int = ""
+
+    title: str = ""
+    description: str = ""
+    translator: str = ""
+    introduction_by: str = ""
+    year_published: int = ""
+    publisher: str = ""
+    pages: int = 0
+    work: str = ""
+    language: str = ""
+    identifiers: dict = {}
+    subtitle: str = ""

@@ -61,22 +61,22 @@ def list_unprocessed_typ_from_import(request, import_id: int, catalogtype: Catal
 @process_api.put("process/import/{import_id}", response=ProcessingStats)
 def process_import(request, import_id: int):
     processor = Process()
-    processor.from_imp(import_id)
+    return processor.from_imp(import_id)
 
 
 @process_api.put("process/import/all/type/{catalogtype}", response=ProcessingStats)
 def process_all_of_type(request, catalogtype: CatalogType):
     processor = Process()
-    processor.from_type(catalogtype)
+    return processor.from_type(catalogtype)
 
 
 @process_api.put("process/import/{import_id}/type/{catalogtype}", response=ProcessingStats)
 def process_type_from_import(request, import_id: int, catalogtype: CatalogType):
     processor = Process()
-    processor.from_type_from_import(import_id, catalogtype)
+    return processor.from_type_from_import(import_id, catalogtype)
 
 
 @process_api.put("process/{catalogtype}/{id}", response=ProcessingStats)
 def process_single_record(request, catalogtype: CatalogType, id: int):
     processor = Process()
-    processor.from_single(catalogtype, id)
+    return processor.from_single(catalogtype, id)

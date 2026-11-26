@@ -184,3 +184,19 @@ then to look for all values of a certain json attribute
 ```
 » jq '.[].by_statement | values' editions.json
 ```
+
+```
+http get localhost:8000/books/api/imports/files
+
+http post localhost:8000/books/api/imports/files/works.txt.gz/import
+http post localhost:8000/books/api/imports/files/authors.txt.gz/import
+http post localhost:8000/books/api/imports/files/editions.txt.gz/import
+
+http get localhost:8000/books/api/process/stats
+
+http put localhost:8000/books/api/process/process/import/1
+http put localhost:8000/books/api/process/process/import/2
+http put localhost:8000/books/api/process/process/import/3
+
+http get localhost:8000/books/api/process/stats
+```
