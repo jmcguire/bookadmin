@@ -1,5 +1,8 @@
 db.sqlite3
 
+# too large for git
+downloads/onix_cup_hum_openlibrary.xml
+
 # Python-generated files
 __pycache__/
 *.py[oc]
