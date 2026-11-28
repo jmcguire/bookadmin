@@ -47,6 +47,61 @@ Simon Schama
     "name": "Mark Bowden",
     "personal_name": "Mark Bowden",
 
+selection of strange birthdates:
+
+  "२१ जानेवारी १८९४"
+  " 11th cent."
+  " 16th cent."
+  "అక్టోబర్ 28, 1909"
+  " B.C."
+  " B.C"
+  "конец XX"
+  "-430"
+  ", 1794"
+  "? 1960"
+  "? B.C."
+  "?-02-03"
+  "????"
+  "?"
+  "?1656"
+  ".  1924"
+  "ок. 1048"
+  "ок. 335"
+  ". 974"
+  ". active 1979"
+  ". fl. 1854"
+  "((1793"
+  "(00..?"
+  "(004.?"
+  "(0055?"
+  "(01.."
+  "(10 Feb 1973)"
+  "(1715/1724"
+  "(1655.12"
+  "(Antoine"
+  "(approximately ) 1436""(ca 1530"
+  "(ca 185"
+  "(fl. 1787"
+  "(gong yuan qian 145 huo qian 135"
+  "(Han) 153"
+  "(qian 145 huo qian 135"
+  "`948"
+  "<1848>"
+  "~1958"
+  "0038?"
+  "0043 av. J."
+  "01 апреля 2008"
+  "01 January 1891 (Napoli, Italy)"
+  "v1728"
+  "v384"
+  "r1884"
+  "Sarvavidyanidhana 17th cent."
+  "l794"
+  "fl. 1708"
+
+for birth_dates, we might just:
+ - try to interpret by a dozen different datetimestrings
+ - else look for any 3-4 digit number, interpret as year
 
 NOTES ON WORKS
 

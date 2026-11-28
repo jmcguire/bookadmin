@@ -55,7 +55,7 @@ def import_file(request, filename: str):
         raise HttpError(400, "import failed")
 
     return FileImportResults(
-        import_id=fileimporter.imp.id,
+        import_id=fileimporter.imp.id if fileimporter.imp else 0,
         file_stats=fileimporter.file_stats(),
-        import_stats=fileimporter.imp.stats(),
+        import_stats=fileimporter.imp.stats() if fileimporter.imp else {},
     )

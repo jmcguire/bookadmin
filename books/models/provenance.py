@@ -1,5 +1,3 @@
-from typing import Literal
-
 from django.db import models
 
 # incoming data from various services
@@ -21,7 +19,7 @@ class ProvenanceQuerySet(models.QuerySet):
 class ProvenanceFieldsMixin(models.Model):
     external_id = models.CharField(max_length=200)
     revision = models.CharField(max_length=200)
-    unprocessed_data = models.JSONField(null=True, blank=True)
+    unprocessed_data = models.JSONField()
 
     objects = ProvenanceQuerySet.as_manager()
 

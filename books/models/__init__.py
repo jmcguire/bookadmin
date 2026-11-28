@@ -6,14 +6,14 @@ from .decisions import (
     DecisionWork,
 )
 from .identity import (
-    IdentityMappingProcessedAuthorToOurAuthor,
-    IdentityMappingProcessedEditionToOurEdition,
-    IdentityMappingProcessedWorkToOurWork,
+    ISBN,
+    IdentityMappingAuthorProcessedToCatalog,
+    IdentityMappingEditionProcessedToCatalog,
+    IdentityMappingWorkProcessedToCatalog,
 )
 from .metadata import (
     # AuthorXMovement,
     Cover,
-    EditionISBN,
     # Genre,
     Language,
     # Movement,
@@ -35,6 +35,7 @@ from .provenance import (
 )
 
 __all__ = [
+    "ISBN",
     "CatalogAuthor",
     "CatalogEdition",
     "CatalogWork",
@@ -44,11 +45,10 @@ __all__ = [
     "DecisionEdition",
     "DecisionEditionToWork",
     "DecisionWork",
-    "EditionISBN",
     # "Genre",
-    "IdentityMappingProcessedAuthorToOurAuthor",
-    "IdentityMappingProcessedEditionToOurEdition",
-    "IdentityMappingProcessedWorkToOurWork",
+    "IdentityMappingAuthorProcessedToCatalog",
+    "IdentityMappingEditionProcessedToCatalog",
+    "IdentityMappingWorkProcessedToCatalog",
     "Language",
     # "Movement",
     "Nationality",

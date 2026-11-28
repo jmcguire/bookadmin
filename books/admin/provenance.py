@@ -1,9 +1,11 @@
 import json
 
 from django.contrib import admin
+from django.contrib.admin import ActionLocation
 from django.utils.html import format_html
 
 from books.models import ProvenanceAuthor, ProvenanceEdition, ProvenanceImport, ProvenanceWork
+from books.services.processing.process_controller import Process
 
 
 @admin.register(ProvenanceImport)
@@ -43,6 +45,20 @@ class ProvenanceAuthorAdmin(admin.ModelAdmin):
     def processed(self, obj):
         return getattr(obj, "processed", None)
 
+    actions = ["process_record"]
+
+    @admin.action(
+        location=ActionLocation.CHANGE_FORM,
+        description="Process Record",
+    )
+    def process_record(self, request, queryset):
+        record = queryset.get()
+        process = Process()
+        if process._process_author(record.id):
+            self.message_user(request, "Processing succeeded.")
+        else:
+            self.message_user(request, "Processing failed.")
+
 
 @admin.register(ProvenanceWork)
 class ProvenanceWorkAdmin(admin.ModelAdmin):
@@ -67,6 +83,20 @@ class ProvenanceWorkAdmin(admin.ModelAdmin):
     def processed(self, obj):
         return getattr(obj, "processed", None)
 
+    actions = ["process_record"]
+
+    @admin.action(
+        location=ActionLocation.CHANGE_FORM,
+        description="Process Record",
+    )
+    def process_record(self, request, queryset):
+        record = queryset.get()
+        process = Process()
+        if process._process_work(record.id):
+            self.message_user(request, "Processing succeeded.")
+        else:
+            self.message_user(request, "Processing failed.")
+
 
 @admin.register(ProvenanceEdition)
 class ProvenanceEditionAdmin(admin.ModelAdmin):
@@ -90,3 +120,17 @@ class ProvenanceEditionAdmin(admin.ModelAdmin):
     @admin.display(description="Processed Record")
     def processed(self, obj):
         return getattr(obj, "processed", None)
+
+    actions = ["process_record"]
+
+    @admin.action(
+        location=ActionLocation.CHANGE_FORM,
+        description="Process Record",
+    )
+    def process_record(self, request, queryset):
+        record = queryset.get()
+        process = Process()
+        if process._process_edition(record.id):
+            self.message_user(request, "Processing succeeded.")
+        else:
+            self.message_user(request, "Processing failed.")

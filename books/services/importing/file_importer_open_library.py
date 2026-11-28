@@ -13,6 +13,7 @@ from books.models import (
     ProvenanceWork,
 )
 
+from .file_importer import FileImporter
 from .results import FileImportStats
 
 
@@ -24,12 +25,11 @@ class OpenLibraryColumns(IntEnum):
     JSON = 4
 
 
-class FileImporterOpenLibrary:
+class FileImporterOpenLibrary(FileImporter):
     def __init__(self, filename: str):
         self.filename: str = filename
         self.full_file_path = None
         self.contents: list = []
-        self.imp: ProvenanceImport = None
         self.provider = "openlibrary"
         self.success: int = 0
         self.failed: int = 0

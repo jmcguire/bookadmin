@@ -1,26 +1,27 @@
 from ninja import Schema
 
 
-class ProcessedWorkData(Schema):
+class ProcessedCatalogType(Schema):
     external_id: str = ""
-    revision: int = ""
+    revision: int = 0
 
+
+class ProcessedWorkData(ProcessedCatalogType):
     title: str = ""
     author_id: str = ""
     description: str = ""
-    year_first_published: int = ""
+    year_first_published: int | None = None
     language: str = ""
 
 
-class ProcessedAuthorData(Schema):
-    external_id: str = ""
-    revision: int = ""
-
+class ProcessedAuthorData(ProcessedCatalogType):
     name: str = ""
     given_name: str = ""
     family_name: str = ""
     bio: str = ""
     birthday: str = ""
+    birthyear: str = ""
+    century_active: str = ""
     deathday: str = ""
     names: list[str] = []
     nationality: list[str] = []
@@ -28,17 +29,14 @@ class ProcessedAuthorData(Schema):
     identifiers: dict = {}
 
 
-class ProcessedEditionData(Schema):
-    external_id: str = ""
-    revision: int = ""
-
+class ProcessedEditionData(ProcessedCatalogType):
     title: str = ""
     description: str = ""
     translator: str = ""
     introduction_by: str = ""
-    year_published: int = ""
+    year_published: int | None = None
     publisher: str = ""
-    pages: int = 0
+    pages: int | None = None
     work: str = ""
     language: str = ""
     identifiers: dict = {}

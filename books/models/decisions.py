@@ -5,7 +5,7 @@ from .abstract_models import TimeStampedFieldsMixin
 # editorial overrides and mapping decisions
 
 
-class DecisionAndOverrides(models.Model):
+class DecisionAndOverridesMixin(models.Model):
     overrides = models.JSONField(default=dict)
     decision = models.JSONField()
 
@@ -13,7 +13,7 @@ class DecisionAndOverrides(models.Model):
         abstract = True
 
 
-class DecisionEdition(TimeStampedFieldsMixin, DecisionAndOverrides):  # pyright: ignore[reportIncompatibleVariableOverride]
+class DecisionEdition(TimeStampedFieldsMixin, DecisionAndOverridesMixin):  # pyright: ignore[reportIncompatibleVariableOverride]
     edition = models.OneToOneField(
         "books.CatalogEdition",
         on_delete=models.CASCADE,
@@ -22,7 +22,7 @@ class DecisionEdition(TimeStampedFieldsMixin, DecisionAndOverrides):  # pyright:
     )
 
 
-class DecisionWork(TimeStampedFieldsMixin, DecisionAndOverrides):  # pyright: ignore[reportIncompatibleVariableOverride]
+class DecisionWork(TimeStampedFieldsMixin, DecisionAndOverridesMixin):  # pyright: ignore[reportIncompatibleVariableOverride]
     work = models.OneToOneField(
         "books.CatalogWork",
         on_delete=models.PROTECT,
@@ -38,7 +38,7 @@ class DecisionEditionToWork(TimeStampedFieldsMixin):
     decision = models.JSONField()
 
 
-class DecisionAuthor(TimeStampedFieldsMixin, DecisionAndOverrides):  # pyright: ignore[reportIncompatibleVariableOverride]
+class DecisionAuthor(TimeStampedFieldsMixin, DecisionAndOverridesMixin):  # pyright: ignore[reportIncompatibleVariableOverride]
     author = models.OneToOneField(
         "books.CatalogAuthor",
         on_delete=models.PROTECT,

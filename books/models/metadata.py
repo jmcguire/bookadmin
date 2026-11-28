@@ -3,11 +3,6 @@ from django.db import models
 # various normalized information about books and authors
 
 
-class EditionISBN(models.Model):
-    edition = models.ForeignKey("books.CatalogEdition", on_delete=models.PROTECT)
-    isbn13 = models.CharField(max_length=13)
-
-
 class Cover(models.Model):
     cover = models.BigAutoField(primary_key=True)
     cover_filename = models.CharField(max_length=200)  # ImageField?

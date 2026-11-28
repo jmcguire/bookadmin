@@ -1,0 +1,174 @@
+6460102 goodreads
+4301061 librarything
+1800687 amazon
+1025280 better_world_books
+178808 doi
+96584 dnb
+76208 overdrive
+70120 bnp
+45236 wikidata
+17556 google
+14396 issn
+12661 open_alex
+11112 bookbrainz
+8429 depósito_legal
+5887 storygraph
+5516 bnf
+2616 project_gutenberg
+1683 amazon.co.uk_asin
+1523 isfdb
+1473 amazon.de_asin
+1460 hathi_trust
+1192 librivox
+ 920 alibris_id
+ 871 standard_ebooks
+ 848 bookdash
+ 785 scribd
+ 772 amazon.ca_asin
+ 768 libris
+ 758 british_library
+ 725 paperback_swap
+ 595 amazon.it_asin
+ 471 national_diet_library,_japan
+ 421 bcid
+ 393 british_national_bibliography
+ 381 freebase
+ 379 bayerische_staatsbibliothek
+ 360 musicbrainz
+ 352 nla
+ 346 harvard
+ 326 shelfari
+ 322 lulu
+ 315 canadian_national_library_archive
+ 309 bodleian,_oxford_university
+ 265 ean
+ 203 istc
+ 198 smashwords_book_download
+ 183 wikisource
+ 177 grand_comics_database
+ 172 zdb-id
+ 147 abebooks.de
+ 126 urn_nbn
+ 117 abebooks,de
+ 105 bookmooch
+  94 lenny
+  80 cornell_university_online_library
+  79 openstax
+  77 isbn
+  61 library_of_congress_classification_(lcc)
+  56 ulrls
+  52 opac_sbn
+  49 dewey_decimal_classification_(ddc)
+  47 flipkart
+  46 choosebooks
+  45 isbn_13
+  45 bhl
+  42 harvard_university_library
+  36 yakaboo
+  33 bookwire
+  32 boston_public_library
+  25 oclc
+  22 w._w._norton
+  22 kindle.com
+  20 create_space
+  18 bibsys
+  17 gallica_(bnf)
+  16 open_textbook_library
+  15 deutsche_nationalbibliothek_(urn:nbn)
+  14 etsc
+  14 booksforyou
+  13 bol.com
+  12 magcloud
+  12 cornell_university_library
+  11 dominican_institute_for_oriental_studies_library
+  11 dc_books
+  10 uri
+  10 publishamerica
+  10 inducks
+   9 apple_ibook_store
+   8 national_library_of_australia
+   8 infosoup
+   7 smashwords.com
+   7 niedersächsische_staats-_und_universitätsbibliothek_göttingen
+   7 learnawesome
+   7 fikka
+   7 bibliothèque_nationale_de_france_(bnf)
+   7 bibliothèque_nationale_de_france
+   7 bestell-nr._(ddr)
+   7 annas_archive
+   6 library_of_congress_catalogue_number
+   6 abwa_bibliographic_number
+   5 staats-_und_universitätsbibliothek_hamburg
+   5 library_of_congress_catalog_no.
+   5 fennica
+   5 booklocker.com
+   5 abaa
+   4 university_library_of_the_ludwig-maximilian_university_of_munich
+   4 universitätsbibliothek_heidelberg
+   4 depósito_legal_bolivia
+   4 biodiversity_heritage_library
+   3 registro_autoral
+   3 open_library
+   3 nbuv
+   3 link
+   3 idealbooks
+   3 folio
+   3 ebook_family_friendly_store
+   3 amazon.co.jp
+   2 usaid/dec
+   2 upc
+   2 special_library_collections
+   2 publisher_catalog
+   2 media_mint_publishing
+   2 limited_edition_book_number
+   2 library_of_congress_catalog_card_no.
+   2 library_of_congress
+   2 lc_classification
+   2 imslp/petrucci_music_library
+   2 ilmiolibro
+   2 format:_kindle_edition
+   2 dnb_(german_national_library)
+   2 discovereads
+   2 call_number
+   2 books_on_demand
+   2 barcode
+   1 victoria_institutions
+   1 universal_decimal_classification
+   1 taideteollisen_korkeakoulun_julkaisusarja
+   1 system_number_of_the_research_library_olomouc
+   1 sudoc
+   1 sadguru_sanga_diary
+   1 project_runeberg
+   1 número_de_incripción_de_la_obra
+   1 numéro_de_dépôt_légal
+   1 num._national_de_thèse
+   1 newberry_library_cartographic_catalog
+   1 national_library_of_egypt
+   1 national_book_chamber_of_moldova
+   1 mathematic_subject_classification
+   1 l.n.
+   1 judaica_savings
+   1 itan_technologies
+   1 isbn_10
+   1 hizmetbooks.org
+   1 hakikat_kitabevi
+   1 gpn_(taiwan)
+   1 glossary
+   1 format
+   1 el_número_de_inscripción_de_la_obra
+   1 edition
+   1 ebooks_libres_et_gratuits
+   1 e-books
+   1 cita_press
+   1 cihm_number
+   1 booksonclick
+   1 bibliotheca_alexandrina
+   1 bibliografia_selecionada
+   1 bestellnummer
+   1 bca
+   1 barnes_and_noble_-_bn.com
+   1 asin
+   1 archive.org
+   1 almedina
+   1 alecso
+   1 abwa_talking_book_number

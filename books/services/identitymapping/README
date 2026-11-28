@@ -1,0 +1,107 @@
+consolidate authors and works before editions?
+identity mappings, then decisions
+every catalog table needs a "redirect"
+if we later find out that it's identical to someone else, we set the redirect
+(and make sure there's no redirect to a redirect. only singe-hop redirects.)
+
+a column on the identity mapping that says "flag for review"?
+
+do we have to hold the whole thing in memory at the same time?
+no
+and thank god, because openlibrary is ~90Gb
+do we have to hold all of one type?
+maybe
+we do have to hold the identifiers, and any field that can be used for that (name)
+we don't have to hold all the extra fields
+basically there are three types of fields in this case:
+- hard identifiers (isbn)
+- soft identifiers (name, birthyear, title, publishedyear)
+- decorators (everything else)
+
+there's a difference between bootstrapping the database from nothing and updates?
+maybe not?
+if we can process one at a time, then it's just "look for a matching. attach or create"
+
+the difference between identity and decisions:
+identity finds or create catalog entries based on fundamental identifiers
+decision is filling in the non-fundamental identifiers, or improving the existing ones
+(which shouldn't break any existing mapping, like turning "A. Smith" into "Adam Smith")
+
+# authors:
+
+when matching names, need to be unicode aware, and standardize the strings
+we will be combining data from english sources and non-english sources
+there is a world where each author has a list of possible names, and we can match on any of them
+which would capture "correct name" (Anne Brontë) and "anglicized name" (Anne Bronte)
+
+there is two problems we're solving here:
+- type 1: combining multiple authors into one. easier
+- type 2: splitting one author into many. much much much more difficult
+
+## type 1
+
+two authors probably match if their last name and birthyear are the same
+if that's true, then they match if the first name loosely matches
+loosely matches means
+- R and Robert
+- Bob and Robert
+
+anther way to tell if authors are the same:
+- if they look different in some ways
+- and they both point to different books
+- but we've determined that those books are the same
+- but but if their names are very different, maybe we flag for review
+
+we want some way to visually see all these connections, to see all the books that are considered "the same" and all the authors on them that are considered "the same"
+
+## type 2
+
+openlibrary has some problems with combining too many people into a single author
+e.g. Butler, /authors/OL2699407A
+it's just a last name, and is the listed author for a ton of books
+and openlibrary calls them all the same person
+
+rules:
+if there's just a name
+if there's no other information
+split it
+
+what do we do when we identify a type 2?
+flag it for review?
+split it into one author for every work it's attached to?
+keep it as one "author" but identify it to the user as a "probably bad data, very sorry"
+
+# works
+
+i'd just keep them the same
+
+decisions:
+work can take their title from the most common title of all the editions
+that might be better, because openlibrary work titles are iffy
+(see battle cry for freedom)
+
+# editions/books
+
+modern books
+two editions are the same if they have the same isbn
+so a book is a thing with a set of isbns
+any processed record with one of those isbns is part of that edition
+
+we create an identity mapping from the processed edition to the catalog edition
+if the catalog edition doesn't exist for that set of isbn, we create it
+
+do we need a table of isbn mappings? or generic identity mappings?
+or can we take advantage of postgres to do a better job of handling lists
+so like each catalog edition has a list of isbns for it
+
+older (pre-isbn) books:
+if some identifier exists, use that
+it's the same if it has an identical title & publishedyear?
+if the same if it has the same title and the the underlying authors have been tagged as the same?
+
+also, what do we do with books that are jsut one specific book
+/books/OL7079371M
+
+# process
+
+fill in ISBN table from all found ISBNs in all editions

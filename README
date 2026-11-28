@@ -47,6 +47,11 @@ uv run python manage.py test
 
 # update the dynamic model type checking
 uv run mypy books
+
+# check stuff
+uv run mypy books              # Type errors
+uv run ruff check books        # Lint errors
+uv run python manage.py check  # Django configuration/model errors
 ```
 
 when cloning this repo, initially run `uv sync`
@@ -54,6 +59,8 @@ when cloning this repo, initially run `uv sync`
 # vs code notes
 
 use ruff to auto-format on save, and auto-sort imports
+
+Cmd-Shift-M to open "problems" panel
 
 # other book social site notes
 
@@ -104,22 +111,36 @@ future tables around interacting with a work
  - user_want_to_read - includes who recommended it, maybe a link to a message or a user
  - update - an update a user makes on their wall
 
+each provenance record should have a state "IMPORTED" and "PROCESSED"
+everytime it's imported maybe with different data, it's set to IMPORTED
+everytime it's processed, it's set to PROCESSED
+which means we can get a "processes all unprocessed records" api endpoint
+
+for ML, look at https://skeptric.com/book-ner-work-of-art/
+maybe train a classifier to extract author names from various text fields?
+maybe just look for all name-looking things as a "possible list"
 
 # ideas
 
-a work is an intellectual piece of writing
+we have three types of stuff: authors, editions, works
+these are my three main "catalog types"
+a work is an intellectual copyrightable piece of art
 an edition is a published thing of a work
-this website focuses on works (though a person can decide if they've read a specific edition)
+(i use book to mean edition, a lot)
+
+any work had to have an initially published edition
+
+this website focuses on works
+(though a person can decide if they've read a specific edition of that work)
+conversations are on works
 
 technically each translation is a new work
 we don't go that far
 for our needs, a translation is a published edition of a work
+(one source calls those things a "manifestation")
 
-but is an abridged version of a work the same work?
-what about an annotated edition?
+other manifestations are abridgements, and annotated
 how do we note that? little tags?
-
-in all cases, maybe you read a specific one, but you talk on the general one?
 
 groups
 a group could be like "translations of a work"
@@ -132,14 +153,14 @@ any review is specific for an edition, but is displayed on the work
 conversations
 conversation is a specific thing, separate from anything
 but it can be shown on a page, and often is connected to a work, to a series, to the original untranslated work
-this way we can just "attach" the same conversationto multiple "translations" of a book
+this way we can just "attach" the same conversation to multiple "translations" of a book
 or a whole series
-sometimes a conversation is on a work, sometimes it's on a translation, but mostly all conversa
-on the conversation, there's a little notes on which work a person has read
+sometimes a conversation is on a work, sometimes it's on a translation?
+visually, in the conversation, there's a little notes which say which edition a person has read
 
 easy way to add books and rate books, like old school netflix, hover over and quickly say "read, 0-3 stars, want to read"
 
-is this too cute:
+is this too cute?
 "originally written" is on the work
 "originally published" in on the edition
 
@@ -166,8 +187,24 @@ lots of sites have trouble with that
 a personal canon, your own top 8. like the myspace 8 favorite.
 
 add soft delete to proveance_import, which makes all it's import data unusable for future consolidation
+unnecessary right now
 
 integrate with internet archive for lendable books, open downloads for public domain books, librevox for public-domain audiobooks, the user's local library for lendab lendable books, libby for lendable ebooks. then link to to paid services for audiobooks, kindle ebooks, amazon, whatever
+
+keep an internal calendar of every day, mapped to a list of
+- author birthdays
+- iterary events
+- current festivals beginning
+- book publishing anniversaries
+and only show to each user stuff they'd definitely care about, and stuff they might care about
+
+outgoing user stream
+each user can subscribe to their own stream
+which is a feed of all things did, with a full content
+and all things their following people did, with partial content
+(because: people own their own shit, and can use it anywhere, but not other people's)
+
+catalog page should credit where the data came from, e.g. openlibray, isfdb
 
 # useful commands
 
@@ -199,4 +236,12 @@ http put localhost:8000/books/api/process/process/import/2
 http put localhost:8000/books/api/process/process/import/3
 
 http get localhost:8000/books/api/process/stats
+
+http put localhost:8000/books/api/identitymapping/authors 
 ```
+
+notify mac at the end of a long running command, only for iterm2
+`your-long-command; printf '\e]9;Command finished!\a'`
+
+get list of keys
+`jq -r 'keys[]' file.json`

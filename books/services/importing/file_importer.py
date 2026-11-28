@@ -1,10 +1,14 @@
-from abc import abstractmethod
+from abc import ABC, abstractmethod
+from typing import ClassVar
+
+from books.models import ProvenanceImport
 
 from .results import FileImportStats
 
 
-class FileImporter:
-    # todo define abstract parameters provider, imp
+class FileImporter(ABC):
+    imp: ClassVar[ProvenanceImport | None] = None
+
     @abstractmethod
     def __init__(self, filename: str):
         pass

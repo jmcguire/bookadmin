@@ -8,6 +8,7 @@ dependencies = [
     "django>=6.0,<7.0",
     "django-debug-toolbar>=8.0.0",
     "django-ninja>=1.8.0",
+    "isbnlib>=3.10.14",
     "psycopg[binary]>=3.3.6",
 ]
 
@@ -27,6 +28,10 @@ python_files = ["tests.py", "test_*.py"]
 [tool.mypy]
 plugins = ["mypy_django_plugin.main"]
 
+[[tool.mypy.overrides]]
+module = ["isbnlib", "isbnlib.*"]
+ignore_missing_imports = true
+
 [tool.django-stubs]
 django_settings_module = "config.settings"
 
@@ -35,3 +40,11 @@ line-length = 100
 
 [tool.ruff.lint.pycodestyle]
 max-line-length = 100
+
+[tool.ruff.lint.per-file-ignores]
+# ruff012 is all false positives with a lot of django stuff
+"books/services/**/results.py" = ["RUF012"]
+"books/services/**/*schemas.py" = ["RUF012"]
+"books/models/**/*.py" = ["RUF012"]
+"books/migrations/*.py" = ["RUF012"]
+"books/admin/*.py" = ["RUF012"]

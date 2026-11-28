@@ -49,16 +49,24 @@ class CatalogWork(TimeStampedFieldsMixin):
 
 
 class CatalogAuthor(TimeStampedFieldsMixin):
-    given_name = models.CharField(max_length=200)
-    family_name = models.CharField(max_length=200)
+    given_name = models.CharField(max_length=200)  # first name
+    family_name = models.CharField(max_length=200)  # last name
     sort_name = models.CharField(max_length=200)
     print_name = models.CharField(max_length=200)
     nationality = models.ForeignKey(
         "books.Nationality", on_delete=models.PROTECT, null=True, blank=True
     )
     language = models.ForeignKey("books.Language", on_delete=models.PROTECT, null=True, blank=True)
-    birth = models.DateField(null=True, blank=True)
-    death = models.DateField(null=True, blank=True)
+
+    birthday = models.DateField(null=True, blank=True)
+    birthyear = models.SmallIntegerField(null=True, blank=True)
+    deathday = models.DateField(null=True, blank=True)
+    deathyear = models.SmallIntegerField(null=True, blank=True)
+    century_active = models.CharField(max_length=10, null=True, blank=True)
+    # year identifier is when the birth and death is just not knowable
+    # but we have something
+    # so we store a string like "5c bce"
+
     bio_short = models.CharField(
         max_length=80
     )  # one sentence, has an implicit "{name} " before it. e.g. " is a celebrated childrens author."
